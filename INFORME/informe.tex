@@ -1,0 +1,240 @@
+%NO MODIFICAR ESTA SECCION!
+\documentclass{article} % Define la clase del documento, en este caso, un artículo
+
+\usepackage[letterpaper,margin=3cm]{geometry} % Configura el tamaño del papel y los márgenes del documento
+\usepackage{graphicx} % Permite la inserción de imágenes
+%\usepackage[spanish]{babel}% Activar esta configuración para informes en español, ajusta el idioma del documento
+\usepackage[usenames]{color} % Permite el uso de colores definidos por nombre en el documento
+\usepackage{hyperref} % Habilita enlaces y referencias dentro del documento
+\hypersetup{colorlinks=true, linkcolor = black, citecolor= black} % Configura el color de los enlaces y citas
+\usepackage{booktabs} % Proporciona comandos para crear tablas de alta calidad
+\usepackage{natbib} % Permite el uso de citas y referencias bibliográficas con diferentes estilos
+\usepackage{tikz} % Permite la creación de gráficos y diagramas vectoriales directamente en LaTeX
+\usepackage{float} % Para controlar la posición de los elementos flotantes, como imágenes, con la opción [H]
+\bibliographystyle{agsm} % Define el estilo de citas y bibliografía (en este caso, el estilo AGSM)
+\usepackage{diagbox} % Permite crear celdas con líneas diagonales en tablas
+\usepackage{listings} % Permite la inclusión y formateo de código fuente en el documento
+\usepackage{xcolor} % Paquete para definir y usar colores en el documento
+\usepackage{parskip} % Añade espacio entre párrafos en lugar de sangrías
+\usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
+\usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
+
+\pagestyle{fancy} % Usa el estilo fancyhdr
+\fancyhf{} % Borra todos los encabezados y pies de página
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt} % Desactiva la línea horizontal predeterminada en el pie
+\setlength{\headheight}{2cm} % Ajusta la altura del encabezado para hacer espacio para la línea
+\fancyhead[L]{\raisebox{0.20cm}{\textbf{Fluid Mechanics}}} % Añade el texto en la parte izquierda del encabezado, subiéndolo ligeramente
+\fancyhead[R]{\raisebox{0.1cm}{\includegraphics[width=0.25\linewidth]{LOGO_UNIVERSIDAD.jpg}}} % Añade la imagen en la parte derecha del encabezado y súbela un poco
+\fancyhead[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal superior centrada
+\fancyfoot[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal en el pie de página centrada
+\fancyfoot[R]{\raisebox{-1.5\baselineskip}{\thepage}} % Coloca el número de página a la derecha, con suficiente espacio debajo de la línea
+\geometry{top=3cm, bottom=2.5cm} % Ajusta los márgenes superior e inferior
+
+% Definición de colores al estilo Visual Studio Code
+\definecolor{codegreen}{rgb}{0.25,0.49,0.48} % Comentarios
+\definecolor{codegray}{rgb}{0.5,0.5,0.5} % Números y anotaciones
+\definecolor{codepurple}{rgb}{0.58,0,0.82} % Palabras clave
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92} % Color de fondo
+
+% Configuración del estilo de las celdas de código
+\lstset{
+    backgroundcolor=\color{backcolour},   % color de fondo; necesita que el paquete color o xcolor esté cargado
+    commentstyle=\color{codegreen},       % estilo de comentarios
+    keywordstyle=\color{codepurple},      % estilo de palabras clave
+    numberstyle=\tiny\color{codegray},    % estilo de los números de línea
+    stringstyle=\color{red},              % estilo de las cadenas de texto
+    basicstyle=\ttfamily\small,           % estilo del texto básico
+    breakatwhitespace=false,              % ajustes de líneas sólo en espacios en blanco
+    breaklines=true,                      % ajustar las líneas si son muy largas
+    captionpos=b,                         % posición de la leyenda (abajo)
+    keepspaces=true,                      % preserva los espacios en el texto; útil si se usa monoespaciado
+    numbers=left,                         % dónde poner los números de línea
+    numbersep=5pt,                        % qué tan lejos están los números de línea del código
+    showspaces=false,                     % mostrar espacios con subrayados particulares; reemplaza 'showstringspaces'
+    showstringspaces=false,               % subrayar los espacios dentro de las cadenas solo
+    showtabs=false,                       % mostrar tabulaciones en el código con subrayados particulares
+    tabsize=2,                            % tamaños de tabulación a 2 espacios
+    language=TeX,                         % lenguaje del código
+    morecomment=[l]\#,                    % reconocer # como inicio de comentario en Python
+    frame=single,                         % agregar un marco simple alrededor del código
+    rulecolor=\color{black}               % color del marco
+}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%   PORTADA
+%Modificar desde aqui en adelante
+%----------------------------------------------------------------------------------------
+\begin{titlepage}%Inicio de la carátula, solo modificar los datos necesarios
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+\center 
+%----------------------------------------------------------------------------------------
+%	ENCABEZADO
+%----------------------------------------------------------------------------------------
+\includegraphics[width=10cm]{LOGO_UNIVERSIDAD.jpg}\\ % Si esta plantilla se copio correctamente, va a llevar la imagen del logo de la facultad.OBS: Es necesario incluir el paquete: graphicx
+\vspace{3cm}
+%----------------------------------------------------------------------------------------
+%	SECCION DEL TITULO
+%----------------------------------------------------------------------------------------
+\HRule \\[0.4cm]
+{ \huge \bfseries Tittle}\\[0.4cm] % Titulo del documento
+{ \huge \bfseries Fluid Mechanics}\\[0.4cm] % Titulo del documento
+\HRule \\[1.5cm]
+ \vspace{5cm}
+%----------------------------------------------------------------------------------------
+%	SECCION DEL AUTOR
+%----------------------------------------------------------------------------------------
+\begin{flushright}
+    { \textbf{Profesors:}\\
+    Patricio Moreno\\
+    Sebastian Sepulveda\\
+    \vspace{0.2cm}
+    \textbf{Assistant:}\\
+    Lukas Wolff\\
+    \vspace{0.2cm}
+    \textbf{Author:}\\
+    Your name\\
+}
+\end{flushright}
+\vspace{1cm}
+%----------------------------------------------------------------------------------------
+%	SECCION DE LA FECHA
+%----------------------------------------------------------------------------------------
+{\large \textbf{\today}}\\[2cm] % El comando \today coloca la fecha del dia, y esto se actualiza con cada compilacion, en caso de querer tener una fecha estatica, reemplazar el \today por la fecha deseada
+\end{titlepage}
+%----------------------------------------------------------------------------------------
+%  INDICE
+%----------------------------------------------------------------------------------------
+\newpage
+\tableofcontents
+\thispagestyle{plain} % Deshabilita el encabezado en la página del índice
+\thispagestyle{empty} % Deshabilita el número de página en la página del índice
+\newpage
+
+%Se puede agregar un indice de figuras si es nesesario
+%\newpage
+%\listoffigures 
+%\thispagestyle{plain} % Deshabilita el encabezado en la página del índice %
+%\thispagestyle{empty}
+%\newpage
+%----------------------------------------------------------------------------------------
+%   ACÁ EMPIEZA EL INFORME
+\setcounter{page}{1} % Reinicia el contador de páginas
+%----------------------------------------------------------------------------------------
+%Este es el formato a seguir para los titulos de las secciones
+\section{INTRODUCTION}
+
+\section{PROCEDURE}
+
+\section{THEORY}
+
+\section{ANALYSIS}
+
+\section{QUESTIONS}
+
+\section{CONCLUSIONS}
+
+\section{REFERENCES}
+
+%----------------------------------------------------------------------------------------
+%Aquí van unos tips básicos de LaTeX
+\newpage
+\section{LaTeX Tips}
+
+\subsection{Algunos tips básicos :)}
+\textbf{Texto en negrita.} 
+\textit{Texto en cursiva.} 
+\underline{Texto subrayado.}
+\\ \\
+Si quieren hacer un salto de línea, es necesario poner \\
+Así bajo al siguiente párrafo.
+
+Si quieren dejar una línea en blanco, son 2 saltos de línea \\ \\
+Y así quedaría.
+
+\subsubsection{Imágenes}
+
+Para insertar una imagen, simplemente deben hacer:
+\\ \\
+
+\begin{figure}[H] %Es importante poner H mayúscula aquí, de este modo la imagen queda fijada en esta posición
+    \centering
+    \includegraphics[width=0.8\linewidth]{LOGO_UNIVERSIDAD.jpg}
+    \caption{Descripción de la imagen}
+    \label{fig:LOGO}
+\end{figure}
+
+Como se muestra en la Figura \ref{fig:LOGO}, la imagen representa el logo de la universidad.
+\\ \\
+También puedo poner 2 imágenes juntas:
+
+\begin{figure}[H] %Enfatizo la H mayúscula para que las imágenes queden fijas en esta posición
+    \centering
+    \begin{minipage}[b]{0.45\linewidth}
+        \includegraphics[width=\linewidth]{LOGO_UNIVERSIDAD.jpg}
+        \caption{Logo 1}
+        \label{fig:logo1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\linewidth}
+        \includegraphics[width=\linewidth]{LOGO_UNIVERSIDAD.jpg}
+        \caption{Logo 2}
+        \label{fig:logo2}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Fórmulas}
+
+Si quiero insertar una fórmula, el formato más cómodo, a mi parecer, es el siguiente:
+
+\begin{equation}
+    \label{eq:Primera-eq}
+    \frac{d}{dx} \left( \int_{0}^{x} f(u) \, du \right) = f(x)
+\end{equation}
+
+Donde incluso puedo citar la ecuación \ref{eq:Primera-eq} en el texto.
+\\ \\
+Este formato agrega instantáneamente el número de ecuación.
+\\ \\
+Como pueden ver, escribir ecuaciones es mucho más cómodo que en Word.
+
+\begin{equation} 
+    %No es necesario poner label
+    \frac{a}{b} \cdot c = \frac{ac}{b} 
+\end{equation}
+
+\subsubsection{Tablas}
+
+Agregar tablas no es complejo; aun así, hay que familiarizarse con el formato.
+
+\begin{table}[H]
+    \centering
+    \caption{Ejemplo de tabla}
+    \label{tab:ejemplo}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\
+        \hline
+        Dato 1 & Dato 2 & Dato 3 \\
+        \hline
+        Dato 4 & Dato 5 & Dato 6 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Como pueden ver, también hay un label, por lo tanto, las tablas también se pueden citar.
+
+\subsection{Otros tips}
+
+Si hacen sus cálculos en Python, pueden poner su código en LaTeX:
+
+\begin{lstlisting}
+    print("Hello World")
+\end{lstlisting}
+
+Cualquier cosa, hay documentación de LaTeX en todas partes, por lo tanto, pueden buscar templates o cómo solucionar los distintos problemas.
+
+Recuerden eliminar esta sección para su entrega final.
+
+\end{document}
