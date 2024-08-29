@@ -16,3 +16,7 @@ Oi es la cantidad de viajes generado en la comuna de las condes
 Hay años en donde hay 4 bases de datos distintas, con becas, sin becas etc
 
 Como lo hacemos ahi?
+
+Sexo es 1 o 2, cual es masculino y femenino?
+
+
