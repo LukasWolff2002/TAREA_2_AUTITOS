@@ -22,7 +22,7 @@ def filtrar_por_valor(ruta_archivo, columna, valor):
 #luego tengo que considerar todas las personas que viven en la casa id_identificacion
 #con eso puedo crear un nuevo df que tenga ingreso total de la casa, cantidad de personas e id_identificacion
 
-def df (ruta_archivo):
+def df_base (ruta_archivo):
 
     #Filtro para personas de las condes
     columna = 'r_p_c'
