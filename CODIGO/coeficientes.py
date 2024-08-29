@@ -2,17 +2,18 @@ from lectura_csv import df_base
 import pandas as pd
 import numpy as np
 
-# Uso de la función
-ruta_archivo = 'BASES_DE_DATOS/ESI2017-PERSONAS.csv'
 
-df_final = df_base(ruta_archivo)
 
-print(df_final)
+
+# print(df_final)
 
 #En base a esto puedo calcular los distintos coeficientes
 #voy a crear un nuevo df que se llame coeficientes
 
-def crear_df_coeficientes(df_final):
+def crear_df_coeficientes(ruta_archivo):
+
+    df_final = df_base(ruta_archivo)
+
     """
     Crea un DataFrame df_coeficientes con una columna Xi que es el logaritmo base 10
     del ingreso per capita, ignorando los hogares donde el ingreso per capita es 0.
@@ -34,8 +35,3 @@ def crear_df_coeficientes(df_final):
     df_coeficientes['Xj'] = df_filtrado['Xj']
 
     return df_coeficientes
-
-# Uso de la función
-df_coeficientes = crear_df_coeficientes(df_final)
-
-print(df_coeficientes)
