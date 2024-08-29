@@ -7,7 +7,7 @@ ruta_archivo = 'BASES_DE_DATOS/ESI2017-PERSONAS.csv'
 
 df_final = df_base(ruta_archivo)
 
-# print(df_final)
+print(df_final)
 
 #En base a esto puedo calcular los distintos coeficientes
 #voy a crear un nuevo df que se llame coeficientes
@@ -26,7 +26,13 @@ def crear_df_coeficientes(df_final):
     # Calcular el logaritmo base 10 del ingreso per capita
     df_coeficientes = pd.DataFrame()
     df_coeficientes['Xi'] = np.log10(df_filtrado['ingreso_per_capita'])
-    
+
+    # Agrego los coeficientes restantes
+    df_coeficientes['Xp'] = df_filtrado['Xp']
+    df_coeficientes['Xe'] = df_filtrado['Xe']
+    df_coeficientes['Xt'] = df_filtrado['Xt']
+    df_coeficientes['Xj'] = df_filtrado['Xj']
+
     return df_coeficientes
 
 # Uso de la función
