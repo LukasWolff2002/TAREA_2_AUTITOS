@@ -9,3 +9,10 @@ Yi cantidad de viajes por hogar
 Oi es la cantidad de viajes generado en la comuna de las condes
 
 # Apuntes Clases
+
+
+# Consultas no Resuletas
+
+Hay años en donde hay 4 bases de datos distintas, con becas, sin becas etc
+
+Como lo hacemos ahi?
