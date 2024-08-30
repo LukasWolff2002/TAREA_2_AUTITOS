@@ -10,30 +10,31 @@ las_condes = archivo[archivo["Nombre Comuna"] == "Las Condes"]
 
 # Filtrar solo las columnas y filas de interés (2012, 2017, 2023)
 años = [2012, 2017, 2023]
+edades = list(range(81))  # Rango de edades de 0 a 80
 resultado = {}
 
 for año in años:
-    # Filtrar hombres y mujeres por cada rango de edad
+    # Crear DataFrame para almacenar los resultados de este año
+    resultado[año] = pd.DataFrame(index=edades, columns=["Hombres", "Mujeres"]).fillna(0)
+    
     for sexo, tipo in [(1, "Hombres"), (2, "Mujeres")]:
+        # Filtrar por sexo y sumar la población por edad
         grupo_etario = las_condes[(las_condes["Sexo\n1=Hombre\n2=Mujer"] == sexo) & 
                                   (las_condes[f"Poblacion {año}"].notna())]
         
-        # Agrupar por edad y sumar la población para cada grupo
+        # Agrupar por edad y sumar la población
         poblacion_por_edad = grupo_etario.groupby("Edad")[f"Poblacion {año}"].sum().reset_index()
         
-        # Guardar los resultados en el diccionario
-        if año not in resultado:
-            resultado[año] = {}
-        
-        resultado[año][tipo] = poblacion_por_edad
+        # Colocar los valores en el DataFrame resultado
+        for index, row in poblacion_por_edad.iterrows():
+            edad = int(row['Edad'])
+            if edad in resultado[año].index:
+                resultado[año].at[edad, tipo] = row[f"Poblacion {año}"]
 
 # Mostrar los resultados
-for año, valores in resultado.items():
-    print(f"Año: {año}")
-    for tipo, data in valores.items():
-        print(f"{tipo}:")
-        print(data)
-        print("\n")
-        
+for año, data in resultado.items():
+    print(f"\nPoblación en Las Condes en el año {año} por edad y sexo:")
+    print(data)
+    
 
 
