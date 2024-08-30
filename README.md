@@ -10,13 +10,41 @@ Oi es la cantidad de viajes generado en la comuna de las condes
 
 # Apuntes Clases
 
+Analizar personas sin beca, por lo tanto hay que ver bien que usar personas a secas
+
+Ver bien que hacer con 2012
+
+De la encuenta de ingreso se puede sacar el tamaño promedio de hogar
+
+No separar por sexo, no es nesesario
+
+Ver ppt de generacion y atraccion
+
+# Importante
+
+Hay que ingresar X promediado, no sacar el promedio de Y, arreglar el modelo.
+
+Da el mismo resultado:), solo que con los promedios de X tiene menos calculo
+
+Hay que criticar el modelo
+
+Para estimar las personas por hogar es usar la ESI, encueta suplementaria del ingreso
+Buscar esa encueta!
+
+INE, proyecciones de poblacion
+
+Tener en cuenta la variacion del valor del peso segun inflacion, ajustar y comparar con los aumentos de inflacion. Para eso buscar el porcentaje de inflacion (SII estan los datos) o usar variacion del valor de la UF
+
 
 # Consultas no Resuletas
 
-Hay años en donde hay 4 bases de datos distintas, con becas, sin becas etc
+# Ideas
 
-Como lo hacemos ahi?
+Calular los porcentajes de grupos etarios, y hacer un analisis
 
-Sexo es 1 o 2, cual es masculino y femenino?
+De eso llevarlo al total de hogares de las condes, y cantidad de personas total teorico versus real
+
+
+
 
 
