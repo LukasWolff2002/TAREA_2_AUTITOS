@@ -13,19 +13,27 @@ años = [2012, 2017, 2023]
 resultado = {}
 
 for año in años:
-    # Sumar la población para hombres
-    hombres = las_condes[(las_condes[f"Poblacion {año}"].notna()) & (las_condes["Sexo\n1=Hombre\n2=Mujer"] == 1)][f"Poblacion {año}"].sum()
-    
-    # Sumar la población para mujeres
-    mujeres = las_condes[(las_condes[f"Poblacion {año}"].notna()) & (las_condes["Sexo\n1=Hombre\n2=Mujer"] == 2)][f"Poblacion {año}"].sum()
-    
-    # Guardar los resultados en el diccionario
-    resultado[año] = {"Hombres": hombres, "Mujeres": mujeres}
+    # Filtrar hombres y mujeres por cada rango de edad
+    for sexo, tipo in [(1, "Hombres"), (2, "Mujeres")]:
+        grupo_etario = las_condes[(las_condes["Sexo\n1=Hombre\n2=Mujer"] == sexo) & 
+                                  (las_condes[f"Poblacion {año}"].notna())]
+        
+        # Agrupar por edad y sumar la población para cada grupo
+        poblacion_por_edad = grupo_etario.groupby("Edad")[f"Poblacion {año}"].sum().reset_index()
+        
+        # Guardar los resultados en el diccionario
+        if año not in resultado:
+            resultado[año] = {}
+        
+        resultado[año][tipo] = poblacion_por_edad
 
 # Mostrar los resultados
 for año, valores in resultado.items():
     print(f"Año: {año}")
-    print(f"Hombres: {valores['Hombres']}, Mujeres: {valores['Mujeres']}\n")
-
+    for tipo, data in valores.items():
+        print(f"{tipo}:")
+        print(data)
+        print("\n")
+        
 
 
