@@ -13,3 +13,6 @@ promedio_personas_por_hogar = personas_por_hogar.mean()
 
 print(f"El promedio de personas por hogar en Las Condes es: {promedio_personas_por_hogar:.2f}")
 
+numero_hogares = las_condes_df['id_identificacion'].nunique()
+
+print(f"El número total de hogares en Las Condes es: {numero_hogares}")

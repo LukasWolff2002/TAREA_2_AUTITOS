@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  31 AUG 2024 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  31 AUG 2024 18:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,7 +1018,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 {C:/Users/felip/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/feli
 p/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 
-<LOGO_UNIVERSIDAD.jpg, id=49, 682.9515pt x 247.6452pt>
+<LOGO_UNIVERSIDAD.jpg, id=53, 682.9515pt x 247.6452pt>
 File: LOGO_UNIVERSIDAD.jpg Graphic file (type jpg)
 <use LOGO_UNIVERSIDAD.jpg>
 Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 152.
@@ -1093,9 +1093,13 @@ Package fancyhdr Warning: \headheight is too small (42.67912pt):
 
 [2]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
 File: LOGO_UNIVERSIDAD.jpg Graphic file (type jpg)
 <use LOGO_UNIVERSIDAD.jpg>
-Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 263.
+Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 294.
 (pdftex.def)             Requested size: 118.07898pt x 42.81331pt.
 
 Package fancyhdr Warning: \headheight is too small (42.67912pt): 
@@ -1110,19 +1114,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 \end{document}
-                    
+l.294 \section
+              {Discusiones}
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 \end{document}
-                    
+l.294 \section
+              {Discusiones}
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 \end{document}
+l.294 \section
+              {Discusiones}
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.294 \section
+              {Discusiones}]
+
+File: LOGO_UNIVERSIDAD.jpg Graphic file (type jpg)
+<use LOGO_UNIVERSIDAD.jpg>
+Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 303.
+(pdftex.def)             Requested size: 118.07898pt x 42.81331pt.
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 50.00879pt, for example:
+(fancyhdr)                \setlength{\headheight}{50.00879pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.32967pt}.
+
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.303 \end{document}
                     ]
 (c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transportes\TAREA_2_AUTIT
 OS\INFORMEbuild\informe.aux
@@ -1134,14 +1164,14 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: D45412363BCB4AB7EAFEB47AE1B71A77;1315.
+(rerunfilecheck)             Checksum: 968FF1A5CFCA3833D98D33A056A9B568;1414.
  ) 
 Here is how much of TeX's memory you used:
- 26200 strings out of 473899
- 479188 string characters out of 5726501
- 1940960 words of memory out of 5000000
- 48510 multiletter control sequences out of 15000+600000
- 585627 words of font info for 128 fonts, out of 8000000 for 9000
+ 26209 strings out of 473899
+ 479262 string characters out of 5726501
+ 1947960 words of memory out of 5000000
+ 48514 multiletter control sequences out of 15000+600000
+ 585693 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,93p,1095b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/felip/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
@@ -1154,9 +1184,9 @@ eX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felip/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transpo
-rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (4 pages, 310692 bytes).
+rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (5 pages, 314618 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 38490 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 38498 words of extra memory for PDF output out of 42996 (max. 10000000)
 
