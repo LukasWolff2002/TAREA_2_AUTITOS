@@ -10,12 +10,17 @@ las_condes = archivo[archivo["Nombre Comuna"] == "Las Condes"]
 
 # Filtrar solo las columnas y filas de interés (2012, 2017, 2023)
 años = [2012, 2017, 2023]
-edades = list(range(81))  # Rango de edades de 0 a 80
+rangos = {
+    "0-5": range(0, 6),
+    "6-22": range(6, 23),
+    "23-62": range(23, 63),
+    "63-80": range(63, 81)
+}
 resultado = {}
 
 for año in años:
-    # Crear DataFrame para almacenar los resultados de este año
-    resultado[año] = pd.DataFrame(index=edades, columns=["Hombres", "Mujeres"]).fillna(0)
+    # Crear DataFrame para almacenar los resultados agrupados por rango de edad
+    resultado[año] = pd.DataFrame(index=rangos.keys(), columns=["Hombres", "Mujeres", "Total"]).fillna(0)
     
     for sexo, tipo in [(1, "Hombres"), (2, "Mujeres")]:
         # Filtrar por sexo y sumar la población por edad
@@ -25,25 +30,17 @@ for año in años:
         # Agrupar por edad y sumar la población
         poblacion_por_edad = grupo_etario.groupby("Edad")[f"Poblacion {año}"].sum().reset_index()
         
-        # Colocar los valores en el DataFrame resultado
-        for index, row in poblacion_por_edad.iterrows():
-            edad = int(row['Edad'])
-            if edad in resultado[año].index:
-                resultado[año].at[edad, tipo] = row[f"Poblacion {año}"]
-
-    # Calcular el total de personas por edad
-    resultado[año]["Total"] = resultado[año]["Hombres"] + resultado[año]["Mujeres"]
+        # Agrupar los datos por los rangos de edad especificados
+        for rango, edades in rangos.items():
+            poblacion_rango = poblacion_por_edad[poblacion_por_edad["Edad"].isin(edades)][f"Poblacion {año}"].sum()
+            resultado[año].at[rango, tipo] += poblacion_rango
     
-    # Calcular el porcentaje de personas de esa edad
-    resultado[año]["% Hombres"] = resultado[año]["Hombres"] / resultado[año]["Total"] * 100
-    resultado[año]["% Mujeres"] = resultado[año]["Mujeres"] / resultado[año]["Total"] * 100
+    # Calcular el total de personas por rango de edad
+    resultado[año]["Total"] = resultado[año]["Hombres"] + resultado[año]["Mujeres"]
+    resultado[año]["Porcentaje Hombres"] = resultado[año]["Hombres"]/resultado[año]["Total"] * 100
+    resultado[año]["Porcentaje Mujeres"] = resultado[año]["Mujeres"]/resultado[año]["Total"] * 100
 
 # Mostrar los resultados
 for año, data in resultado.items():
-    print(f"\nPoblación en Las Condes en el año {año} por edad y sexo:")
+    print(f"\nPoblación en Las Condes en el año {año} por rango de edad y sexo:")
     print(data)
-
-prom_personas2012 = 3.16
-prom_personas2017 = 3.09
-prom_personas2023 = 2.6
-
