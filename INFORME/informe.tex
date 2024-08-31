@@ -80,34 +80,33 @@
 %----------------------------------------------------------------------------------------
 %	ENCABEZADO
 %----------------------------------------------------------------------------------------
-\includegraphics[width=10cm]{LOGO_UNIVERSIDAD.jpg}\\ % Si esta plantilla se copio correctamente, va a llevar la imagen del logo de la facultad.OBS: Es necesario incluir el paquete: graphicx
-\vspace{3cm}
 %----------------------------------------------------------------------------------------
 %	SECCION DEL TITULO
 %----------------------------------------------------------------------------------------
-\HRule \\[0.4cm]
-{ \huge \bfseries Tittle}\\[0.4cm] % Titulo del documento
-{ \huge \bfseries Sistemas de Transporte}\\[0.4cm] % Titulo del documento
-\HRule \\[1.5cm]
- \vspace{5cm}
-%----------------------------------------------------------------------------------------
-%	SECCION DEL AUTOR
-%----------------------------------------------------------------------------------------
-\begin{flushright}
-    { \textbf{Profesor:}\\
-    Rafael Del Piano\\
-    \vspace{0.2cm}
-    \textbf{Alumnos:}\\
-    Felipe Vicencio\\
-    Lukas Wolff\\
-}
-\end{flushright}
+\begin{center}
+    \textbf{Generacion y Atraccion de Viajes} \\[0.5cm]
+    Felipe Vicencio y Lukas Wolff, institucion y correos electronicos
+\end{center}
+
 \vspace{1cm}
+
+\begin{center}
+    \textbf{Resumen}    
+\end{center}
+
+\begin{flushleft}
+    Hablar aqui del resumen del informe actual, no puede exceer las 250 palabras. Poner palabras clave, ademas de selccionar 3 palabras clave por los autores
+\end{flushleft}
+
+
+\vspace{1cm}
+
+\end{titlepage}
 %----------------------------------------------------------------------------------------
 %	SECCION DE LA FECHA
 %----------------------------------------------------------------------------------------
-{\large \textbf{\today}}\\[2cm] % El comando \today coloca la fecha del dia, y esto se actualiza con cada compilacion, en caso de querer tener una fecha estatica, reemplazar el \today por la fecha deseada
-\end{titlepage}
+%{\large \textbf{\today}}\\[2cm] % El comando \today coloca la fecha del dia, y esto se actualiza con cada compilacion, en caso de querer tener una fecha estatica, reemplazar el \today por la fecha deseada
+
 %----------------------------------------------------------------------------------------
 %  INDICE
 %----------------------------------------------------------------------------------------
@@ -128,11 +127,6 @@
 \setcounter{page}{1} % Reinicia el contador de páginas
 %----------------------------------------------------------------------------------------
 %Este es el formato a seguir para los titulos de las secciones
-
-\begin{center}
-    \section*{Resumen}    
-\end{center}
-
 
 \section{Introducción}
 
@@ -173,7 +167,7 @@ El problema es que normalmente no se tienen suficientes dato para poder completa
 \\ \\
 De esta manera, es importante analizar los distintos factores que pueden influir en los viajes de las personas.
 
-\subsection{Análisis Regrecion Lineal}
+\subsection{Análisis Regresión Lineal}
 
 En base a los datos obtenidos por distintas encuetas, se busca obtener una relacion que explique el comportamiento de la poblacion:
 
@@ -205,6 +199,44 @@ De esta forma, el model ode regrecion lineal queda de la siguiente forma:
 
 Es importante mencionar que los coeficientes $\vec{\beta}$ y $\alpha$ fueron entregados por el enunciado.
 
+\section{Resultados Bases de Datos}
+DESPUES NO PONER LAS SECCIONES DE ESTA FORMA.
+
+\subsection{Resultados 2.1}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Año & Numero Hogares \\
+        \hline
+        2012 & 271 \\
+        2017 & 272 \\
+        2023 & 187 \\
+        \hline
+    \end{tabular}
+    \caption{Matriz de estimacion de viajes}
+    Fuente: Elaboracion propia a partir de los datos de encueta ESI
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \diagbox{Año}{Coeficiente} & $X_i$ & $X_p$ & $X_e$ & $X_t$ & $X_j$ \\
+        \hline
+        2012 & 5.730 & 0.258 & 0.771 & 1.978 & 0.303 \\
+        2017 & 5.773 & 0.243 & 0.691 & 1.978 & 0.320 \\
+        2023 & 5.934 & 0.160 & 0.668 & 1.775 & 0.299 \\
+        \hline
+    \end{tabular}
+    \caption{Matriz de estimacion de viajes}
+    Fuente: Elaboracion propia a partir de los datos de encueta ESI
+\end{table}
+
+\subsection{Resultados 2.3}
+
+Nesecito el numero total de hoares
 
 
 %----------------------------------------------------------------------------------------
