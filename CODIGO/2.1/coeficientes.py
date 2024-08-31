@@ -35,3 +35,13 @@ def crear_df_coeficientes(ruta_archivo):
     df_coeficientes['Xj'] = df_filtrado['Xj']
 
     return df_coeficientes
+
+def coef_promediados (ruta_archivo):
+    df_coeficientes = crear_df_coeficientes(ruta_archivo)
+    numero_hogares = len(df_coeficientes)
+    df_coeficientes_promediados = df_coeficientes.mean()
+    df_coeficientes_promediados['numero_hogares'] = numero_hogares
+
+    return df_coeficientes_promediados
+
+
