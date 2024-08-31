@@ -1,6 +1,6 @@
 import pandas as pd
 
-def leer_csv(archivo, delimiter = ";", encoding="latin1"):
+def leer_csv(archivo, delimiter=";", encoding="latin1"):
     df = pd.read_csv(archivo, delimiter=delimiter, encoding=encoding)
     return df
 
@@ -31,12 +31,19 @@ for año in años:
             if edad in resultado[año].index:
                 resultado[año].at[edad, tipo] = row[f"Poblacion {año}"]
 
+    # Calcular el total de personas por edad
+    resultado[año]["Total"] = resultado[año]["Hombres"] + resultado[año]["Mujeres"]
+    
+    # Calcular el porcentaje de personas de esa edad
+    resultado[año]["% Hombres"] = resultado[año]["Hombres"] / resultado[año]["Total"] * 100
+    resultado[año]["% Mujeres"] = resultado[año]["Mujeres"] / resultado[año]["Total"] * 100
+
 # Mostrar los resultados
 for año, data in resultado.items():
     print(f"\nPoblación en Las Condes en el año {año} por edad y sexo:")
     print(data)
-    
-personas2012 = 3.16
-personas2017 = 3.09
-personas2023 = 2.6
+
+prom_personas2012 = 3.16
+prom_personas2017 = 3.09
+prom_personas2023 = 2.6
 
