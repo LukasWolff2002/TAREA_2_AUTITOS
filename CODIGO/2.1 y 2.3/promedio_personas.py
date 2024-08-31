@@ -1,6 +1,5 @@
 import pandas as pd
 
-# Cargar el archivo CSV (reemplaza 'archivo.csv' con el nombre de tu archivo)
 df = pd.read_csv('BASES_DE_DATOS/ESI2023-PERSONAS.csv')
 
 # Filtrar por la comuna de Las Condes (id = 13114)

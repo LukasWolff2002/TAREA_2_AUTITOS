@@ -36,5 +36,7 @@ for año, data in resultado.items():
     print(f"\nPoblación en Las Condes en el año {año} por edad y sexo:")
     print(data)
     
-
+personas2012 = 3.16
+personas2017 = 3.09
+personas2023 = 2.6
 
