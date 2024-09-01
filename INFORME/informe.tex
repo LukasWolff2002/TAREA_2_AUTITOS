@@ -19,6 +19,7 @@
 \usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
 \usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
 \usepackage{microtype}  % Mejora la justificación del texto
+\usepackage{amsmath}
 
 \geometry{
     paperwidth=21.6cm,  % Ancho del papel
@@ -327,6 +328,37 @@ Considerando los resultados obtenidos, se puede ajustar el parametro Xi para aju
     \vspace{0.2cm}
     \\Fuente: Elaboracion propia
 \end{table}
+
+
+\subsection{Precisión de Resultados}
+Analizando los datos presentados junto con las bases de datos, se estima que la precisión de los resultados obtenidos es fiable.
+En primer lugar, las fuentes de donde se recopiló la información fueron extraídas directamente de las páginas web gubernamentales y municipales, 
+así como también de los agentes encargados de análisis estadísticos sociales, como el INE.\\ 
+
+En la sección 2.1 se analizaron datos de una muestra poblacional, mientras que en la sección 2.2 son de la población total en ese año.
+Lo anterior se expresa en la diferencia de los parámetros $X_p$, $X_e$, $X_t$ y $X_j$. Para visualizar la precisión de mejor manera se generó la
+siguiente tabla con valores estadísticos.\\
+
+\begin{table}[H]
+    \caption{Tabla con celdas divididas en subfilas}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Coeficiente} & \textbf{Estadístico} & \textbf{Población} & \textbf{Muestra} \\ \hline
+    $X_p$ & \multicolumn{1}{|c|}{\(\mu\)} & \multicolumn{1}{|c|}{0.178} & \multicolumn{1}{|c|}{0.220} \\ \cline{2-4}
+    & \multicolumn{1}{|c|}{\(\sigma\)} & \multicolumn{1}{|c|}{0.010} & \multicolumn{1}{|c|}{0.053} \\ \hline
+    $X_e$ & \multicolumn{1}{|c|}{\(\mu\)} & \multicolumn{1}{|c|}{0.544} & \multicolumn{1}{|c|}{0.710} \\ \cline{2-4}
+    & \multicolumn{1}{|c|}{\(\sigma\)} & \multicolumn{1}{|c|}{0.045} & \multicolumn{1}{|c|}{0.054} \\ \hline
+    $X_t$ & \multicolumn{1}{|c|}{\(\mu\)} & \multicolumn{1}{|c|}{1.539} & \multicolumn{1}{|c|}{1.910} \\ \cline{2-4}
+    & \multicolumn{1}{|c|}{\(\sigma\)} & \multicolumn{1}{|c|}{0.074} & \multicolumn{1}{|c|}{0.117} \\ \hline
+    $X_j$ & \multicolumn{1}{|c|}{\(\mu\)} & \multicolumn{1}{|c|}{0.479} & \multicolumn{1}{|c|}{0.307} \\ \cline{2-4}
+    & \multicolumn{1}{|c|}{\(\sigma\)} & \multicolumn{1}{|c|}{0.064} & \multicolumn{1}{|c|}{0.011} \\ \hline
+    \end{tabular}
+    \\Fuente: Elaboracion propia.
+\end{table}
+
+De la tabla anterior se puede apreciar que los resultados obtenidos poseen una desviación estándar insignificante, por lo que se 
+consideran representativos para cada coeficiente.
 
 
 \section{Anexos}
