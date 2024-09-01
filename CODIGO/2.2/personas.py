@@ -39,8 +39,19 @@ for año in años:
     resultado[año]["Total"] = resultado[año]["Hombres"] + resultado[año]["Mujeres"]
     resultado[año]["Porcentaje Hombres"] = resultado[año]["Hombres"]/resultado[año]["Total"] * 100
     resultado[año]["Porcentaje Mujeres"] = resultado[año]["Mujeres"]/resultado[año]["Total"] * 100
+    
+    total_hogares_2012 = 104649
+    total_hogares_2017 = 118007 #por falta de información proporcionada, se supone el mismo para 2023
+    if año == 2012:
+        resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares_2012
+    else:
+        resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares_2017
+    
 
 # Mostrar los resultados
 for año, data in resultado.items():
     print(f"\nPoblación en Las Condes en el año {año} por rango de edad y sexo:")
     print(data)
+
+
+

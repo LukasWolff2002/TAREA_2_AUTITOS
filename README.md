@@ -44,7 +44,12 @@ Calular los porcentajes de grupos etarios, y hacer un analisis
 
 De eso llevarlo al total de hogares de las condes, y cantidad de personas total teorico versus real
 
+# Cosas por Hacer
 
+numero total de hogares (poblacion) LISTO
 
+inflación 2012, 2017, 2023 
+
+Precio pasaje micro, metro, auto
 
 

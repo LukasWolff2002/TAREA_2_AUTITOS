@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  31 AUG 2024 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  31 AUG 2024 20:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1096,10 +1096,16 @@ Package fancyhdr Warning: \headheight is too small (42.67912pt):
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 File: LOGO_UNIVERSIDAD.jpg Graphic file (type jpg)
 <use LOGO_UNIVERSIDAD.jpg>
-Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 295.
+Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 317.
 (pdftex.def)             Requested size: 118.07898pt x 42.81331pt.
 
 Package fancyhdr Warning: \headheight is too small (42.67912pt): 
@@ -1114,30 +1120,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.295 \section
-              {Discusiones}
+l.317     \item Â
+                 ¿Es suficiente la informaciÃ³n del modelo de regresiÃ³n lin...
+
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.295 \section
-              {Discusiones}
+l.317     \item Â
+                 ¿Es suficiente la informaciÃ³n del modelo de regresiÃ³n lin...
+
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.295 \section
-              {Discusiones}
-pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.295 \section
-              {Discusiones}]
+l.317     \item Â
+                 ¿Es suficiente la informaciÃ³n del modelo de regresiÃ³n lin...
+]
 
 File: LOGO_UNIVERSIDAD.jpg Graphic file (type jpg)
 <use LOGO_UNIVERSIDAD.jpg>
-Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 304.
+Package pdftex.def Info: LOGO_UNIVERSIDAD.jpg  used on input line 322.
 (pdftex.def)             Requested size: 118.07898pt x 42.81331pt.
 
 Package fancyhdr Warning: \headheight is too small (42.67912pt): 
@@ -1148,11 +1151,23 @@ Package fancyhdr Warning: \headheight is too small (42.67912pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.32967pt}.
 
 [4
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.322 \end{document}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.304 \end{document}
+l.322 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.322 \end{document}
                     ]
 (c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transportes\TAREA_2_AUTIT
 OS\INFORMEbuild\informe.aux
@@ -1167,8 +1182,8 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 968FF1A5CFCA3833D98D33A056A9B568;1414.
  ) 
 Here is how much of TeX's memory you used:
- 26209 strings out of 473899
- 479262 string characters out of 5726501
+ 26210 strings out of 473899
+ 479269 string characters out of 5726501
  1947960 words of memory out of 5000000
  48514 multiletter control sequences out of 15000+600000
  585693 words of font info for 129 fonts, out of 8000000 for 9000
@@ -1184,9 +1199,9 @@ eX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felip/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transpo
-rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (5 pages, 314636 bytes).
+rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (5 pages, 315166 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
  38498 words of extra memory for PDF output out of 42996 (max. 10000000)
 
