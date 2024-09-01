@@ -132,24 +132,16 @@
 
 \section{Introducción}
 
-Hablar de las importancias y aplicaciones de estos modelos en la estimacion de viajes como para:
-
-\begin{itemize}
-    \item Planificación de transporte
-    \item Diseño de infraestructura
-    \item Evaluación de proyectos
-    \item Análisis de políticas
-    \item Estudios de impacto
-    \item Estudios de demanda
-    \item Estudios de oferta
-    \item Estudios de accesibilidad
-    \item Estudios de congestión
-    \item Estudios de externalidades
-\end{itemize}
+El estudio de los viajes es fundamental para el desarrollo de las zonas altamente pobladas, ya que permite ahorrar tiempos de viaje, ahorros en combustible e incluso, mejorar el bienestar de las personas. Para poder generar estos analisis, es nesesario recaudar data real sobre el comportamiento de las personas como su tipo de transporte, origne y destino, horas de viajes, entre otros.
+\\ \\
+El problema de estos estudios radica en la cantidad de datos que se nesesitan para poder realizar un analisis completo, por lo tanto, se buscan hacer estimaciones mediante una regrecion lineal para poder representar a una poblacion de la manera mas eficaz posible.
+\\ \\
+En el presente informe, se buscara analizar el numero de viajes de la comuna de Las Condes, en base a la data obtenida de la encuesta ESI, para los años 2012, 2017 y 2023. Para esto, se utilizara un modelo de regresion lineal para poder estimar el numero de viajes de la comuna en base a distintos factores que pueden influir en la cantidad de viajes.
+\\ \\
+Finalmente, se analizara y discutira sobre la eficiencia del modelo, la precision de los datos obtenidos y los factores que pueden influir en la cantidad de viajes de la comuna de Las Condes.
 
 \section{Contenido}
 
-\newpage
 \section{Ecuaciones, Tablas y Figuras}
 
 \subsection{Matriz Origen Destino}
@@ -254,53 +246,6 @@ A continuación se presentarán los resultaos obtenidos de porcentajes de person
     \\Fuente: Elaboracion propia a partir de los datos de Estimación y Proyección 2002 - 2035
 \end{table}
 
-\begin{table}[h!]
-    \centering
-    \caption{Rango etario en Las Condes año 2012}
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
-    0-5 & 10484 & 9377 & 19861 & 52.79\% & 47.21\% \\ \hline
-    6-22 & 33329 & 30366 & 63695 & 52.32\% & 47.67\% \\ \hline
-    23-62 & 75938 & 82177 & 158115 & 48.02\% & 51.97\% \\ \hline
-    63-80 & 17595 & 26095 & 43690 & 40.27\% & 59.72\% \\ \hline
-    \end{tabular}
-    \label{Cuadro 4}
-    \\Fuente: Elaboración propia.
-\end{table}
-
-\begin{table}[h!]
-    \centering
-    \caption{Rango etario en Las Condes año 2017}
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
-    0-5 & 10672 & 9692 & 20364 & 52.41\% & 47.59\% \\ \hline
-    6-22 & 31833 & 29028 & 60861 & 52.31\% & 47.69\% \\ \hline
-    23-62 & 84879 & 88035 & 172914 & 49.08\% & 50.91\% \\ \hline
-    63-80 & 21753 & 31816 & 53569 & 40.61\% & 59.39\% \\ \hline
-    \end{tabular}
-    \label{Cuadro 5}
-    \\Fuente: Elaboración propia.
-\end{table}
-
-\begin{table}[h!]
-    \centering
-    \caption{Rango etario en Las Condes año 2023}
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
-    0-5 & 10769 & 9758 & 20527 & 52.46\% & 47.53\% \\ \hline
-    6-22 & 31416 & 28678 & 60094 & 52.27\% & 47.72\% \\ \hline
-    23-62 & 96289 & 97341 & 193630 & 49.72\% & 50.27\% \\ \hline
-    63-80 & 27825 & 39107 & 66932 & 41.57\% & 58.42\% \\ \hline
-    \end{tabular}
-    \label{Cuadro 6}
-    \\Fuente: Elaboración propia.
-\end{table}
-
-CREO QUE LO QUE HICISTE EN LA 2.1 VA EN ESTA SECCION
-
 
 \subsection{Resultados 2.3}
 
@@ -317,6 +262,58 @@ sacado de las bases de datos
     \item ¿Es suficiente la información del modelo de regresión lineal obtenido?
     \item ¿Qué cosas han cambiado entre el 2012 y el 2023 que puedan haber tenido un impacto significativo en la generación de viajes, más allá de las incluidas en el modelo?
 \end{itemize}
+
+\section{Anexos}
+
+\subsection{Tablas Datos Encuesta EP}
+
+\begin{table}[H]
+    \centering
+    \caption{Rango etario en Las Condes año 2012}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
+    0-5 & 10484 & 9377 & 19861 & 52.79\% & 47.21\% \\ \hline
+    6-22 & 33329 & 30366 & 63695 & 52.32\% & 47.67\% \\ \hline
+    23-62 & 75938 & 82177 & 158115 & 48.02\% & 51.97\% \\ \hline
+    63-80 & 17595 & 26095 & 43690 & 40.27\% & 59.72\% \\ \hline
+    \end{tabular}
+    \label{Cuadro 4}
+    \\Fuente: Elaboración propia.
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Rango etario en Las Condes año 2017}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
+    0-5 & 10672 & 9692 & 20364 & 52.41\% & 47.59\% \\ \hline
+    6-22 & 31833 & 29028 & 60861 & 52.31\% & 47.69\% \\ \hline
+    23-62 & 84879 & 88035 & 172914 & 49.08\% & 50.91\% \\ \hline
+    63-80 & 21753 & 31816 & 53569 & 40.61\% & 59.39\% \\ \hline
+    \end{tabular}
+    \label{Cuadro 5}
+    \\Fuente: Elaboración propia.
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Rango etario en Las Condes año 2023}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
+    0-5 & 10769 & 9758 & 20527 & 52.46\% & 47.53\% \\ \hline
+    6-22 & 31416 & 28678 & 60094 & 52.27\% & 47.72\% \\ \hline
+    23-62 & 96289 & 97341 & 193630 & 49.72\% & 50.27\% \\ \hline
+    63-80 & 27825 & 39107 & 66932 & 41.57\% & 58.42\% \\ \hline
+    \end{tabular}
+    \label{Cuadro 6}
+    \\Fuente: Elaboración propia.
+\end{table}
+
+
+
 
 %----------------------------------------------------------------------------------------
 \end{document}
