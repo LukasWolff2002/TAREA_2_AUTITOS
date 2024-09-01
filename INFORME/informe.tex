@@ -19,7 +19,7 @@
 \usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
 \usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
 \usepackage{microtype}  % Mejora la justificación del texto
-\usepackage{amsmath}
+
 
 \geometry{
     paperwidth=21.6cm,  % Ancho del papel
@@ -32,13 +32,16 @@
 \fancyhf{} % Borra todos los encabezados y pies de página
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt} % Desactiva la línea horizontal predeterminada en el pie
-\setlength{\headheight}{1.5cm} % Ajusta la altura del encabezado para hacer espacio para la línea
-\fancyhead[L]{\raisebox{0.20cm}{\textbf{Sistemas de Transporte}}} % Añade el texto en la parte izquierda del encabezado, subiéndolo ligeramente
-\fancyhead[R]{\raisebox{0.1cm}{\includegraphics[width=0.25\linewidth]{LOGO_UNIVERSIDAD.jpg}}} % Añade la imagen en la parte derecha del encabezado y súbela un poco
-\fancyhead[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal superior centrada
-\fancyfoot[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal en el pie de página centrada
-\fancyfoot[R]{\raisebox{-1.5\baselineskip}{\thepage}} % Coloca el número de página a la derecha, con suficiente espacio debajo de la línea
-\geometry{top=2.5cm, bottom=2.5cm} % Ajusta los márgenes superior e inferior
+%\setlength{\headheight}{1.5cm} % Ajusta la altura del encabezado para hacer espacio para la línea
+%\fancyhead[L]{\raisebox{0.20cm}{\textbf{Sistemas de Transporte}}} % Añade el texto en la parte izquierda del encabezado, subiéndolo ligeramente
+%\fancyhead[R]{\raisebox{0.1cm}{\includegraphics[width=0.25\linewidth]{LOGO_UNIVERSIDAD.jpg}}} % Añade la imagen en la parte derecha del encabezado y súbela un poco
+%\fancyhead[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal superior centrada
+%\fancyfoot[C]{\rule{\textwidth}{0.6pt}} % Añade una línea horizontal en el pie de página centrada
+%\fancyfoot[R]{\raisebox{-1.5\baselineskip}{\thepage}} % Coloca el número de página a la derecha, con suficiente espacio debajo de la línea
+%\geometry{top=2.5cm, bottom=2.5cm} % Ajusta los márgenes superior e inferior
+
+\fancyhead[R]{\thepage} % Número de página a la derecha en el encabezado
+
 
 % Definición de colores al estilo Visual Studio Code
 \definecolor{codegreen}{rgb}{0.25,0.49,0.48} % Comentarios
@@ -88,7 +91,7 @@
     \textbf{\LARGE Generación y Atracción de Viajes} \\[0.5cm]
     \textbf{Felipe Vicencio y Lukas Wolff} \\
     Facultad de Ingenieria y Ciencias Aplicadas, Universidad de los Andes, Santiago de Chile.\\
-    email: favicencio@miuandes.cl , lwolff@miuandes.cl
+    email: \href{mailto:lwolff@miuandes.cl}{lwolff@miuandes.cl}, \href{mailto:favicencio@miuandes.cl}{favicencio@miuandes.cl}
 \end{center}
 
 \vspace{1cm}
