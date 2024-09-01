@@ -1,17 +1,22 @@
 from coeficientes import coef_promediados
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 def promedio_hogares(df, año):
     if año == 2012:
         ponderacion = 1
     elif año == 2017:
-        ponderacion = 2
+        ponderacion = 1.182
     elif año == 2023:
-        ponderacion = 3
+        ponderacion = 1.615
 
     xi = df['Xi']
-    y = -2.1723 + 0.3792 * df['Xi'] + 0.6221 * df['Xp'] + 1.0065 * df['Xe'] + 0.4302 * df['Xt'] + 0.1614 * df['Xj']
+    xi = 10**xi
+    xi = xi * ponderacion
+    xi = np.log10(xi)
+    print(f'{xi = }')
+    y = -2.1723 + 0.3792 * xi + 0.6221 * df['Xp'] + 1.0065 * df['Xe'] + 0.4302 * df['Xt'] + 0.1614 * df['Xj']
     hogares = df['numero_hogares']    
     return(y, hogares)
 
