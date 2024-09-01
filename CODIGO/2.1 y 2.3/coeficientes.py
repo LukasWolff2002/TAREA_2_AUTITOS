@@ -26,6 +26,8 @@ def crear_df_coeficientes(ruta_archivo):
     
     # Calcular el logaritmo base 10 del ingreso per capita
     df_coeficientes = pd.DataFrame()
+
+    print(f'el ingrweso per capita promedio es {df_filtrado["ingreso_per_capita"].mean()}')
     df_coeficientes['Xi'] = np.log10(df_filtrado['ingreso_per_capita'])
 
     # Agrego los coeficientes restantes

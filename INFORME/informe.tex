@@ -191,7 +191,7 @@ De esta forma, el model ode regrecion lineal queda de la siguiente forma:
     Y_i = -2.1723 + 0.3792X_i + 0.6221X_p + 1.0065X_e + 0.4302X_t + 0.1614X_j
 \end{equation}
 
-Es importante mencionar que los coeficientes $\vec{\beta}$ y $\alpha$ fueron entregados por el enunciado.
+Es importante mencionar que los coeficientes $\vec{\beta}$ y $\alpha$ fueron entregados por el enunciado, donde el modelo fue calibrado segun los datos del 2012.
 
 \section{Resultados Bases de Datos}
 DESPUES NO PONER LAS SECCIONES DE ESTA FORMA.
@@ -265,6 +265,69 @@ De la regrecion lineal obtenida, se obtuvieron los siguientes resultados:
     \item ¿Es suficiente la información del modelo de regresión lineal obtenido?
     \item ¿Qué cosas han cambiado entre el 2012 y el 2023 que puedan haber tenido un impacto significativo en la generación de viajes, más allá de las incluidas en el modelo?
 \end{itemize}
+
+\subsection{Inflacion}
+
+Un punto clave a considerar sobre el comportamiento de las personas es el valor y peso que tiene la moneda en el tiempo, de esta manera, es nesesario considerar la inflacion, y el aumento del precio en los distintos insumos del transporte.
+
+\begin{table}[H]
+    \centering
+    \caption{Inflacion en Chile}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|}
+        \hline
+        Año & Inflacion \\
+        \hline
+        2012 - 2017 & 18,2\% \\
+        2012 - 2023 & 61,5\% \\
+        \hline
+    \end{tabular}
+    \vspace{0.2cm}
+    \\Fuente: INE https://calculadoraipc.ine.cl/
+\end{table}
+
+Donde, algunos de los insumos relacionados con el transporte que han aumentado de precio son:
+
+\begin{table}[H]
+    \centering
+    \caption{Aumento de precio de insumos}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        Año & UF (Pesos) & $\Delta$ \% UF & Bencina 95 (USD) & $\Delta$ \% Bencina & Metro & $\Delta$ \% Metro\\
+        \hline
+        2012 & 22.296,19 & - & 1.56  & - & & \\
+        2017 & 26.348,83 & 18.2\% & 1.15 & -26.28 & & \\
+        2023 & 35.122,26 & 57.6\% & 1.64 & 5.13 & & \\
+        \hline
+    \end{tabular}
+    \vspace{0.2cm}
+    \\Fuente: Elaboracion propia
+\end{table}
+
+Las variaciones fueron calculadas sobre el año 2012
+
+%https://www.sii.cl/valores_y_fechas/uf/uf2023.htm
+
+Considerando los resultados obtenidos, se puede ajustar el parametro Xi para ajustar la regrecion a los distintos años:
+
+\begin{table}[H]
+    \centering
+    \caption{Ajuste de parametros Xi}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Año & $X_i$ & Numero de Viajes \\
+        \hline
+        2012 & 5.730 & 1.84 \\
+        2017 & 5.845 & 1.79 \\
+        2023 & 6.142 & 1.74 \\
+        \hline
+    \end{tabular}
+    \vspace{0.2cm}
+    \\Fuente: Elaboracion propia
+\end{table}
+
 
 \section{Anexos}
 
