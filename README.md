@@ -50,6 +50,6 @@ numero total de hogares (poblacion) LISTO
 
 inflación 2012, 2017, 2023 
 
-Precio pasaje micro, metro, auto
+Precio pasaje micro, metro, auto LISTO
 
 
