@@ -1,6 +1,6 @@
 # Explicacion Codigo Bases de Datos
 
-El analisis esta en el siguiente [INFORME](INFOMRE/informe.pdf)
+El analisis esta en el siguiente [INFORME](INFORME/informe.pdf)
 
 ## Lectura y Filtrado de Datos
 
