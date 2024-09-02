@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  2 SEP 2024 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  2 SEP 2024 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1116,25 +1116,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.288 
+l.289 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.288 
+l.289 
       ]
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+Underfull \hbox (badness 10000) in paragraph at lines 329--332
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--335
+Underfull \hbox (badness 10000) in paragraph at lines 333--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
 
@@ -1153,13 +1153,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.341 A
+l.342 A
        demás, se realizó un análisis del estadístico t para
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.341 A
+l.342 A
        demás, se realizó un análisis del estadístico t para]
 
 
@@ -1175,13 +1175,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.418 
+l.419 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.418 
+l.419 
       ]
 
 
@@ -1197,13 +1197,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.454 
+l.455 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.454 
+l.455 
       ] (informe.bbl
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -1242,13 +1242,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.10}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.475 \end{document}
+l.476 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.475 \end{document}
+l.476 \end{document}
                     ]
 (c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transportes\TAREA_2_AUTIT
 OS\INFORMEbuild\informe.aux
@@ -1263,10 +1263,10 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
 (rerunfilecheck)             Checksum: 1236FEA84CD8501983BFAB90BD85D974;2258.
  ) 
 Here is how much of TeX's memory you used:
- 26318 strings out of 473899
- 480560 string characters out of 5726501
+ 26319 strings out of 473899
+ 480574 string characters out of 5726501
  1946960 words of memory out of 5000000
- 48549 multiletter control sequences out of 15000+600000
+ 48550 multiletter control sequences out of 15000+600000
  587760 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,93p,1095b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1282,9 +1282,9 @@ ams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felip/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transpo
-rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (8 pages, 145577 bytes).
+rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (8 pages, 145925 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 219 PDF objects out of 1000 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
  39053 words of extra memory for PDF output out of 42996 (max. 10000000)
 
