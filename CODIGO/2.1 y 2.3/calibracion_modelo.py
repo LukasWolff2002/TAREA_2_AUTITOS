@@ -13,7 +13,7 @@ def promedio_hogares(df, año):
 
     xi = df['Xi']
     xi = 10**xi
-    xi = xi * ponderacion
+    xi = xi / ponderacion
     xi = np.log10(xi)
     print(f'{xi = }')
     y = -2.1723 + 0.3792 * xi + 0.6221 * df['Xp'] + 1.0065 * df['Xe'] + 0.4302 * df['Xt'] + 0.1614 * df['Xj']
