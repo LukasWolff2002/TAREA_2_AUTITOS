@@ -8,10 +8,11 @@
 \usepackage{hyperref} % Habilita enlaces y referencias dentro del documento
 \hypersetup{colorlinks=true, linkcolor = black, citecolor= black} % Configura el color de los enlaces y citas
 \usepackage{booktabs} % Proporciona comandos para crear tablas de alta calidad
-\usepackage{natbib} % Permite el uso de citas y referencias bibliográficas con diferentes estilos
+\usepackage{natbib}
+
 \usepackage{tikz} % Permite la creación de gráficos y diagramas vectoriales directamente en LaTeX
 \usepackage{float} % Para controlar la posición de los elementos flotantes, como imágenes, con la opción [H]
-\bibliographystyle{agsm} % Define el estilo de citas y bibliografía (en este caso, el estilo AGSM)
+
 \usepackage{diagbox} % Permite crear celdas con líneas diagonales en tablas
 \usepackage{listings} % Permite la inclusión y formateo de código fuente en el documento
 \usepackage{xcolor} % Paquete para definir y usar colores en el documento
@@ -19,7 +20,6 @@
 \usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
 \usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
 \usepackage{microtype}  % Mejora la justificación del texto
-
 
 \geometry{
     paperwidth=21.6cm,  % Ancho del papel
@@ -204,6 +204,8 @@ DESPUES NO PONER LAS SECCIONES DE ESTA FORMA.
 
 \subsection{Resultados 2.1}
 
+Los datos muestrales fueron obtenidos de la encuesta ESI \textbf{\cite{esi}}
+
 \begin{table}[H]
     \centering
     \caption{Matriz de estimacion de viajes}
@@ -291,7 +293,7 @@ Un punto clave a considerar sobre el comportamiento de las personas es el valor 
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: INE https://calculadoraipc.ine.cl/
+    \\Fuente: \textbf{\cite{ipc}}
 \end{table}
 
 Donde, algunos de los insumos relacionados con el transporte que han aumentado de precio son:
@@ -310,7 +312,7 @@ Donde, algunos de los insumos relacionados con el transporte que han aumentado d
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: Elaboracion propia
+    \\Fuente: \textbf{\cite{sii}}
 \end{table}
 
 \begin{table}[H]
@@ -327,15 +329,10 @@ Donde, algunos de los insumos relacionados con el transporte que han aumentado d
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: Elaboracion propia
+    \\Fuente: \textbf{\cite{tradingeconomics}, \cite{bcentral}}
 \end{table}
 
-
 Las variaciones fueron calculadas sobre el año 2012
-
-%https://www.sii.cl/valores_y_fechas/uf/uf2023.htm para la UF
-%https://es.tradingeconomics.com/chile/gasoline-prices para los precios de la bencina
-%https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TIPO_CAMBIO/MN_TIPO_CAMBIO4/TC_HIST/TC_HIST para el dolar
 
 Considerando los resultados obtenidos, se puede ajustar el parametro Xi para ajustar la regrecion a los distintos años:
 
@@ -404,7 +401,6 @@ comparar la media muestral con la media poblacional, teniendo como hipótesis ce
 Los resultados para cada rango etario demostraron que no se rechaza esa hipótesis, ya que \(\left| p_{value} \right| < \left| t_{value} \right|\), es decir, existe una correlación entre las medias, 
 por lo que se puede afirmar que los resultados obtenidos son precisos y descriptivos.
 
-
 \section{Anexos}
 
 \subsection{Tablas Datos Encuesta EP}
@@ -459,5 +455,8 @@ por lo que se puede afirmar que los resultados obtenidos son precisos y descript
     \vspace{0.2cm}
     \\Fuente: Elaboración propia.
 \end{table}
+
+\bibliographystyle{plainnat}  % Estilo de la bibliografía (puedes cambiarlo a otro si prefieres)
+\bibliography{referencias.bib}  % Nombre del archivo .bib
 
 \end{document}
