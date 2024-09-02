@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  2 SEP 2024 16:58
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  2 SEP 2024 16:50
->>>>>>> origin/rama_pipe
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.7)  2 SEP 2024 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1268,7 +1264,7 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26317 strings out of 473899
- 480555 string characters out of 5726501
+ 480552 string characters out of 5726501
  1946960 words of memory out of 5000000
  48548 multiletter control sequences out of 15000+600000
  587760 words of font info for 162 fonts, out of 8000000 for 9000
@@ -1286,7 +1282,7 @@ ams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/felip/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/felip/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "c:/Users\felip\OneDrive\Escritorio\202420\Sistema de transpo
-rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (8 pages, 145604 bytes).
+rtes\TAREA_2_AUTITOS\INFORMEbuild\informe.pdf" (8 pages, 145527 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
