@@ -58,7 +58,7 @@ for año in años:
     total_hogares = total_personas / media_año
     
     # Reemplazar la columna "Ctd hogares" con este único valor
-    resultado[año]["Ctd hogares"] = total_hogares  
+    resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares  
 
 # Mostrar los resultados
 for año, data in resultado.items():
