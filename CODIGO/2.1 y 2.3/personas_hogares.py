@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('BASES_DE_DATOS/ESI2023-PERSONAS.csv') #se cambia archivo
+df = pd.read_csv('BASES_DE_DATOS/ESI2017-PERSONAS.csv') #se cambia archivo
 
 # Filtrar por la comuna de Las Condes (id = 13114)
 las_condes_df = df[df['r_p_c'] == 13114]
@@ -12,7 +12,3 @@ personas_por_hogar = las_condes_df.groupby('id_identificacion').size()
 promedio_personas_por_hogar = personas_por_hogar.mean()
 
 print(f"El promedio de personas por hogar en Las Condes es: {promedio_personas_por_hogar:.2f}")
-
-numero_hogares = las_condes_df['id_identificacion'].nunique()
-
-print(f"El número total de hogares en Las Condes es: {numero_hogares}")

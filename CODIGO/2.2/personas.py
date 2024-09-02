@@ -20,11 +20,11 @@ resultado = {}
 
 for año in años:
     # Crear DataFrame para almacenar los resultados agrupados por rango de edad
-    resultado[año] = pd.DataFrame(index=rangos.keys(), columns=["Hombres", "Mujeres", "Total"]).fillna(0)
+    resultado[año] = pd.DataFrame(index=rangos.keys(), columns=["Hombre", "Mujer", "Total"]).fillna(0)
     
-    for sexo, tipo in [(1, "Hombres"), (2, "Mujeres")]:
+    for sexo, tipo in [(1, "Hombre"), (2, "Mujer")]:
         # Filtrar por sexo y sumar la población por edad
-        grupo_etario = las_condes[(las_condes["Sexo\n1=Hombre\n2=Mujer"] == sexo) & 
+        grupo_etario = las_condes[(las_condes["sexo\n1=Hombre\n2=Mujer"] == sexo) & 
                                   (las_condes[f"Poblacion {año}"].notna())]
         
         # Agrupar por edad y sumar la población
@@ -40,12 +40,19 @@ for año in años:
     resultado[año]["Porcentaje Hombres"] = resultado[año]["Hombres"]/resultado[año]["Total"] * 100
     resultado[año]["Porcentaje Mujeres"] = resultado[año]["Mujeres"]/resultado[año]["Total"] * 100
     
-    total_hogares_2012 = 104649
-    total_hogares_2017 = 118007 #por falta de información proporcionada, se supone el mismo para 2023
+    #total_hogares_2012 = 104649
+    #total_hogares_2017 = 118007 por falta de información proporcionada, se supone el mismo para 2023
+    
+    media_2023 = 2.6
+    media_2012 = 3.16
+    media_2017 = 3.09
+    
     if año == 2012:
-        resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares_2012
-    else:
-        resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares_2017
+        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2012
+    if año == 2017:
+        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2017
+    if año == 2023:
+        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2023
     
 
 # Mostrar los resultados
