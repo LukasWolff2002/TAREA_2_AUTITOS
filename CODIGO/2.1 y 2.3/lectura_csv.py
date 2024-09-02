@@ -69,8 +69,6 @@ def df_base (ruta_archivo):
     df_final = df_final.merge(xj_conteo, on=columna_id, how='left')
     df_final['Xj'] = df_final['Xj'].fillna(0)
 
-
-
     return df_final
 
 

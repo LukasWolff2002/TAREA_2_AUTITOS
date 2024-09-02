@@ -14,13 +14,6 @@ def crear_df_coeficientes(ruta_archivo):
 
     df_final = df_base(ruta_archivo)
 
-    """
-    Crea un DataFrame df_coeficientes con una columna Xi que es el logaritmo base 10
-    del ingreso per capita, ignorando los hogares donde el ingreso per capita es 0.
-
-    :param df_final: DataFrame que contiene la columna 'ingreso_per_capita'
-    :return: DataFrame con la columna Xi
-    """
     # Filtrar los registros donde ingreso_per_capita es mayor que 0
     df_filtrado = df_final[df_final['ingreso_per_capita'] > 0]
     
