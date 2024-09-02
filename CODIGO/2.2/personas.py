@@ -39,6 +39,7 @@ for año in años:
             resultado[año].at[rango, tipo] += poblacion_rango
     
     # Calcular el total de personas por rango de edad
+
     resultado[año]["Total"] = resultado[año]["Hombre"] + resultado[año]["Mujer"]
     resultado[año]["Porcentaje Hombre"] = resultado[año]["Hombre"] / resultado[año]["Total"] * 100
     resultado[año]["Porcentaje Mujer"] = resultado[año]["Mujer"] / resultado[año]["Total"] * 100
@@ -58,9 +59,11 @@ for año in años:
     total_hogares = total_personas / media_año
     
     # Reemplazar la columna "Ctd hogares" con este único valor
+
     resultado[año]["Ctd por hogar"] = resultado[año]["Total"]/total_hogares  
 
 # Mostrar los resultados
 for año, data in resultado.items():
     print(f"\nPoblación en Las Condes en el año {año} por rango de edad y sexo:")
     print(data)
+    
