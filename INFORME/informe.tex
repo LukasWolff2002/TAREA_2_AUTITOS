@@ -6,13 +6,10 @@
 \usepackage[spanish]{babel}% Activar esta configuración para informes en español, ajusta el idioma del documento
 \usepackage[usenames]{color} % Permite el uso de colores definidos por nombre en el documento
 \usepackage{hyperref} % Habilita enlaces y referencias dentro del documento
-\hypersetup{colorlinks=true, linkcolor = black, citecolor= black} % Configura el color de los enlaces y citas
 \usepackage{booktabs} % Proporciona comandos para crear tablas de alta calidad
 \usepackage{natbib}
-
 \usepackage{tikz} % Permite la creación de gráficos y diagramas vectoriales directamente en LaTeX
 \usepackage{float} % Para controlar la posición de los elementos flotantes, como imágenes, con la opción [H]
-
 \usepackage{diagbox} % Permite crear celdas con líneas diagonales en tablas
 \usepackage{listings} % Permite la inclusión y formateo de código fuente en el documento
 \usepackage{xcolor} % Paquete para definir y usar colores en el documento
@@ -20,6 +17,14 @@
 \usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
 \usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
 \usepackage{microtype}  % Mejora la justificación del texto
+
+\hypersetup{
+    colorlinks   = true,    % Colorea los enlaces
+    linkcolor    = blue,    % Color de los enlaces internos (por ejemplo, en la tabla de contenidos)
+    citecolor    = blue,    % Color de los enlaces a citas bibliográficas
+    filecolor    = blue,    % Color de los enlaces a archivos locales
+    urlcolor     = blue,    % Color de los enlaces externos (URLs)
+}
 
 \geometry{
     paperwidth=21.6cm,  % Ancho del papel
