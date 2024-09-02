@@ -40,20 +40,24 @@ for año in años:
     resultado[año]["Porcentaje Hombres"] = resultado[año]["Hombres"]/resultado[año]["Total"] * 100
     resultado[año]["Porcentaje Mujeres"] = resultado[año]["Mujeres"]/resultado[año]["Total"] * 100
     
-    #total_hogares_2012 = 104649
-    #total_hogares_2017 = 118007 por falta de información proporcionada, se supone el mismo para 2023
-    
-    media_2023 = 2.6
-    media_2012 = 3.16
-    media_2017 = 3.09
+    # total_hogares_2012 = 104649
+    # total_hogares_2017 = 118007 #por falta de información proporcionada, se supone el mismo para 2023
     
     if año == 2012:
-        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2012
-    if año == 2017:
-        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2017
-    if año == 2023:
-        resultado[año]["Ctd hogares"] = resultado[año]["Total"].sum()/media_2023
+        media_año = 3.16
+    elif año == 2017:
+        media_año = 3.09
+    elif año == 2023:
+        media_año = 2.6
     
+    # Calcular el total de personas
+    total_personas = resultado[año]["Total"].sum()
+    
+    # Calcular el número total de hogares
+    total_hogares = total_personas / media_año
+    
+    # Reemplazar la columna "Ctd hogares" con este único valor
+    resultado[año]["Ctd hogares"] = total_hogares  
 
 # Mostrar los resultados
 for año, data in resultado.items():

@@ -1,4 +1,5 @@
 # Fdb version 4
+<<<<<<< HEAD
 ["bibtex informe"] 0 "informe.aux" "informe.bbl" "informe" 1725310736.62503 -1
   "informe.aux" 0 -1 0 ""
   (generated)
@@ -6,6 +7,9 @@
   "informe.blg"
   (rewritten before read)
 ["pdflatex"] 1725310733.90024 "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORME/informe.tex" "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.pdf" "informe" 1725310736.62551 0
+=======
+["pdflatex"] 1725310246.12179 "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORME/informe.tex" "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.pdf" "informe" 1725310248.73241 0
+>>>>>>> origin/rama_pipe
   "C:/Users/felip/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1724855781 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/felip/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1725135574 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/felip/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723078970 24265332 2635efadca81f5f206c727bee64ea864 ""
@@ -192,11 +196,19 @@
   "C:/Users/felip/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1718356376 10214 61188260d324e94bc2f66825d7d3fdf4 ""
   "C:/Users/felip/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/felip/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
+<<<<<<< HEAD
   "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORME/informe.tex" 1725310729 22782 1b39d0340ad2e0ff687cfa23e97bad44 ""
   "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.aux" 1725310736 4796 ad7a7e929d80f796392baf5f80955594 "pdflatex"
   "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.out" 1725310736 2255 61a6399355cb7ca3dab6779846cf1357 "pdflatex"
   "informe.bbl" 1725310729 1877 89ca91905b676c00f298579dd92b40ef "bibtex informe"
   "informe.tex" 1725310729 22782 1b39d0340ad2e0ff687cfa23e97bad44 ""
+=======
+  "LOGO_UNIVERSIDAD.jpg" 1725028365 209820 2134e729a4493a99d3d34c719af1eecf ""
+  "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORME/informe.tex" 1725310241 15364 136a78c7b83b0e3de845299c01b234f2 ""
+  "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.aux" 1725310248 2632 c74ac2a31ed2dd096be1e6c82ec7c2e9 "pdflatex"
+  "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.out" 1725310248 1414 968ff1a5cfca3833d98d33a056a9b568 "pdflatex"
+  "informe.tex" 1725310241 15364 136a78c7b83b0e3de845299c01b234f2 ""
+>>>>>>> origin/rama_pipe
   (generated)
   "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.aux"
   "c:/Users/felip/OneDrive/Escritorio/202420/Sistema de transportes/TAREA_2_AUTITOS/INFORMEbuild/informe.log"
