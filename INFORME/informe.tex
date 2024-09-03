@@ -313,39 +313,40 @@ La regrecion lineal aplicada fue calibrada segun los datos del 2012, por lo tant
 
 \subsection{Precisión de Resultados}
 
-RESUMIR LO COMENTADO, SI QUEDA ESACIO, PONER TABLA AQUI
+Analizando los datos presentados junto con las bases de datos, se estima que la precisión de los resultados obtenidos es fiable, ya que 
+las fuentes de donde se recopiló la información fueron directamente de las páginas web 
+gubernamentales y municipales, así como también de los agentes encargados de análisis estadísticos sociales, como el INE.
 
-%Analizando los datos presentados junto con las bases de datos, se estima que la precisión de los resultados obtenidos es fiable. En primer lugar, las fuentes de donde se recopiló la información fueron extraídas directamente de las páginas web gubernamentales y municipales, así como también de los agentes encargados de análisis estadísticos sociales, como el INE.
+Si bien se evidencia una diferencia de los parámetros $X_p$, $X_e$, $X_t$ y $X_j$, se debe a la comparación de datos muestrales
+con poblacionales, los cuales se compararon estadísticamente (ver Tabla \textbf{\ref{Precision_Resultados}}).
 
-%En la sección 2.1 se analizaron datos de una muestra poblacional, mientras que en la sección 2.2 son de la población total en ese año.
-%Lo anterior se expresa en la diferencia de los parámetros $X_p$, $X_e$, $X_t$ y $X_j$. Para visualizar la precisión de mejor manera se generó la
-%siguiente tabla con valores estadísticos.
-
-%Para llamar la tabla de precision de resultados, se debe poner el siguiente comando \textbf{\ref{Precision_Resultados}}
-
-%De la tabla anterior se puede apreciar que los resultados obtenidos poseen una desviación estándar insignificante, por lo que se 
-%consideran representativos para cada coeficiente y su respectiva muestra.
-
-%Además, se realizó un análisis del estadístico t para 
-%comparar la media muestral con la media poblacional, teniendo como hipótesis cero que la media poblacional es menor a la media muestral.
-%Los resultados para cada rango etario demostraron que no se rechaza esa hipótesis, ya que \(\left| p_{value} \right| < \left| t_{value} \right|\), es decir, existe una correlación entre las medias, 
-%por lo que se puede afirmar que los resultados obtenidos son precisos y descriptivos.
+Se puede apreciar que los resultados obtenidos poseen una desviación estándar insignificante, por lo que se 
+consideran representativos para cada coeficiente. Además, se realizó un análisis del estadístico t para 
+comparar la media muestral con la media poblacional. Debido a que \(\left| p_{value} \right| < \left| t_{value} \right|\), existe una correlación entre las medias, 
+por lo que se puede afirmar que los resultados obtenidos son precisos y descriptivos.
 
 \subsection{Analisis}
 
-Considerando todo lo expuesto anteriormente, se puede observar que el modelo de regrecion lineal sin ser ajustado es fiable con cierto margen de error, donde se concluye que el numero de viajes disminuye por cada casa lo cual tiene sentido, ya que luego de analizar la inflacion y el valor de los distintos insumos de transporte (ver tabla \textbf{\ref{Insumos}}), se puede concluir que el valor de un viaje no aumenta con mayor proporcion que la inflacion, por lo tanto el valor de este aumenta. Ademas, se puede observar que el tamaño de las familias disminuye, lo cual influye en el numero de viajes. Finalmente, es nesesario considerar el efecto que tuvo la pandemia sobre las personas, donde muchos trabajos comenzaron a ser virtuales o semi presenciales, lo cual afecta el transporte en familias, sobre todo las mas chicas.
+Considerando todo lo expuesto anteriormente, se puede observar que el modelo de regrecion lineal sin ser ajustado es fiable con cierto margen de error, donde se concluye que el numero de viajes disminuye por cada casa lo cual tiene sentido, ya que luego de analizar la inflacion y el valor de los distintos insumos de transporte (ver Tabla \textbf{\ref{Insumos}}), se puede concluir que el valor de un viaje no aumenta con mayor proporcion que la inflacion, por lo tanto el valor de este aumenta. Ademas, se puede observar que el tamaño de las familias disminuye, lo cual influye en el numero de viajes. Finalmente, es nesesario considerar el efecto que tuvo la pandemia sobre las personas, donde muchos trabajos comenzaron a ser virtuales o semi presenciales, lo cual afecta el transporte en familias, sobre todo las de menor tamaño.
 \\ \\
-Se obser que al calibrar el modelo segun la inflacion, los viajes por hogar viaja aun mas, lo cual se relaciona con la perdida de valor que tiene el dinero, la cual no a sido proporcional a los aumentos de sueldos (ver tabla \ref{VariacionIPCH}).
+Se observa que al calibrar el modelo segun la inflacion, los viajes por hogar bajan aun mas, lo cual se relaciona con la perdida de valor que tiene el dinero y no a sido proporcional a los aumentos de sueldos (ver Tabla \ref{VariacionIPCH}).
 \\ \\
-Finalmente, haciendo un analisis estadistico de los datos, se concluye que. PIPE SEGUIR AQUI
+Finalmente, haciendo un analisis estadistico de los datos, se concluye que los datos se pueden considerar representativos y precisos, dado la procedencia de estos y su correlacion muestral con poblacional según el estadístico T Student.
 
-\section{Conclucion}
+\section{Conclusión}
 
-En conclucion ...
+En base a los resultados obtenidos, se puede concluir que el modelo 
+de regresión lineal es fiable para estimar el numero de viajes de la 
+comuna de Las Condes, sin embargo, es nesesario ajustar el modelo según 
+la inflación para obtener resultados mas precisos. Además, se concluye 
+que el número de viajes disminuye año a año, junto con el tamaño familiar. 
+Con esto, se puede decir que fue un trabajo exitoso, ya que se midió y 
+analizó la información de manera correcta, atribuyendo respaldo a la precisión 
+de los resultados y validéz a la regresión lineal.
 
 \section{Anexos}
 
-\subsection{Tablas Inflacion}
+\subsection{Tablas Inflación}
 
 \begin{table}[H]
     \centering
@@ -400,7 +401,7 @@ En conclucion ...
     \\Fuente: Elaboracion propia
 \end{table}
 
-\subsection{Presicion de Datos}
+\subsection{Presicion de Datos} \label{sec:Precision}
 
 \begin{table}[H]
     \caption{Análisis estadístico para la precisión de resultados.}
