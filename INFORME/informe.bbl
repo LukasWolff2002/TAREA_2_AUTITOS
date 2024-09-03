@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,12 @@
 \newblock {Tipo de Cambio Histórico - Dólar Observado}, 2024.
 \newblock URL \url{https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TIPO_CAMBIO/MN_TIPO_CAMBIO4/DOLAR_OBS_ADO?cbFechaDiaria=2012&cbFrecuencia=ANNUAL&cbCalculo=NONE&cbFechaBase=}.
 \newblock [Último acceso: 2 de septiembre de 2024].
+
+\bibitem[{Instituto Nacional de Estadísticas de Chile (INE)}(2017)]{censo2017}
+{Instituto Nacional de Estadísticas de Chile (INE)}.
+\newblock {Proyección de resultados Censo 2017}, 2017.
+\newblock URL \url{https://regiones.ine.cl/biobio/estadisticas-regionales/sociales/demografia-y-vitales/proyecciones-de-poblacion}.
+\newblock [Último acceso: septiembre 3, 2024].
 
 \bibitem[{Instituto Nacional de Estadísticas de Chile (INE)}(2024{\natexlab{a}})]{esi}
 {Instituto Nacional de Estadísticas de Chile (INE)}.
