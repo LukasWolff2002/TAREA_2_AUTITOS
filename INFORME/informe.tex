@@ -17,6 +17,8 @@
 \usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
 \usepackage{amsmath} % Proporciona una amplia variedad de entornos y comandos matemáticos
 \usepackage{microtype}  % Mejora la justificación del texto
+\usepackage{ragged2e}
+
 
 \hypersetup{
     colorlinks   = true,    % Colorea los enlaces
@@ -108,8 +110,7 @@
     \textbf{\large RESUMEN}    
 \end{center}
 
-\begin{flushleft}
-    Hablar aqui del resumen del informe actual, no puede exceer las 250 palabras. Poner palabras clave, ademas de selccionar 3 palabras clave por los autores. HAY 174 PALABRAS\\
+\begin{justify}
     Nowadays, the importance of having an efficient transport 
     system and a precise analysis of travels per person to 
     determine the flux and social behavior is key to the 
@@ -124,7 +125,7 @@
     made in a year did not vary considerably between 2012 and 2023 in Las Condes. 
     But, taking into account the variability of the inflation, IPC, gas, dollar and public transport price, 
     and the pandemic, the number of trips throughout the years increased in almost 25\%. 
-\end{flushleft}
+\end{justify}
 
 
 \vspace{1cm}
@@ -158,19 +159,19 @@
 
 \section{Introducción}
 
-El estudio de los viajes es fundamental para el desarrollo de las zonas altamente pobladas, ya que permite ahorrar tiempos de viaje, ahorros en combustible e incluso, mejorar el bienestar de las personas. Para poder generar estos analisis, es nesesario recaudar data real sobre el comportamiento de las personas como su tipo de transporte, origne y destino, horas de viajes, entre otros.
+El estudio de los viajes es fundamental para el desarrollo de zonas altamente pobladas, ya que permite ahorrar tiempo de viaje, reducir el consumo de combustible y mejorar el bienestar de las personas. Para generar estos análisis, es necesario recolectar datos reales sobre el comportamiento de las personas, como su tipo de transporte, origen y destino, horas de viaje, entre otros.
 \\ \\
-El problema de estos estudios radica en la cantidad de datos que se nesesitan para poder realizar un analisis completo, por lo tanto, se buscan hacer estimaciones mediante una regrecion lineal para poder representar a una poblacion de la manera mas eficaz posible.
+El problema de estos estudios radica en la cantidad de datos que se necesitan para realizar un análisis completo. Por lo tanto, se recurre a estimaciones mediante una regresión lineal para representar a la población de la manera más eficaz posible.
 \\ \\
-En el presente informe, se buscara analizar el numero de viajes de la comuna de Las Condes, en base a la data obtenida de la encuesta ESI, para los años 2012, 2017 y 2023. Para esto, se utilizara un modelo de regresion lineal para poder estimar el numero de viajes de la comuna en base a distintos factores que pueden influir en la cantidad de viajes.
+En este informe, se buscará analizar el número de viajes de la comuna de Las Condes, basándose en los datos obtenidos de la encuesta ESI para los años 2012, 2017 y 2023. Se utilizará un modelo de regresión lineal para estimar el número de viajes de la comuna en base a distintos factores que pueden influir en la cantidad de viajes.
 \\ \\
-Finalmente, se analizara y discutira sobre la eficiencia del modelo, la precision de los datos obtenidos y los factores que pueden influir en la cantidad de viajes de la comuna de Las Condes.
+Finalmente, se analizará y discutirá la eficiencia del modelo, la precisión de los datos obtenidos y los factores que pueden influir en la cantidad de viajes en la comuna de Las Condes.
 
 \section{Contenido}
 
-\subsection{Matriz Origen Destino}
+\subsection{Matriz Origen-Destino}
 
-Para la representacion de todos los viajes de la red, se puede utilizar la matriz origen destino, la cual se puede representar de la siguiente manera:
+Para representar todos los viajes de la red, se puede utilizar la matriz origen-destino, la cual se representa de la siguiente manera:
 
 \begin{equation}
     \begin{bmatrix}
@@ -181,48 +182,48 @@ Para la representacion de todos los viajes de la red, se puede utilizar la matri
     \end{bmatrix}
 \end{equation}
 
-El problema es que normalmente no se tienen suficientes dato para poder completar de manera satisfactoria la matriz origen destino, por lo que se deben utilizar modelos de estimacion de viajes para poder completarla.
+Generalmente no se disponen de suficientes datos para completar satisfactoriamente la matriz origen-destino, por lo que se deben utilizar modelos de estimación de viajes para completarla.
 \\ \\
-De esta manera, es importante analizar los distintos factores que pueden influir en los viajes de las personas.
+Es importante analizar los distintos factores que pueden influir en los viajes de las personas.
 
 \subsection{Regresión Lineal}
 
-En base a los datos obtenidos por distintas encuetas, se busca obtener una relacion que explique el comportamiento de la poblacion:
+Basándonos en los datos obtenidos de distintas encuestas, se busca establecer una relación que explique el comportamiento de la población:
 
 \begin{equation}
     Y = \alpha + \beta_{1}X_{1} + \beta_{2}X_{2} + \cdots + \beta_{n}X_{n} + \epsilon
 \end{equation}
 
-Lo cual se puede extrapolar a:
+Que se puede extrapolar a:
 
 \begin{equation}
     Y = \alpha + \vec{\beta}\vec{X} + \epsilon
 \end{equation}
 
-Donde Y corresponde al numero de viajes y $\vec{X}$ corresponden a los distintos factores que pueden afectar a la cantidad de viajes. En el caso de este informe, se utilizaran las siguientes variables X:
+Donde $Y$ corresponde al número de viajes y $\vec{X}$ a los distintos factores que pueden afectar la cantidad de viajes. En este informe, se utilizarán las siguientes variables $X$:
 
 \begin{center}
-    $X_i = log_{10}(IPCH)$, donde IPCH correspone al ingreso per capita por hogar\\
-    $X_p$ = numero de personas con edad $\epsilon$ [0, 5]\\
-    $X_e$ = numero de personas con edad $\epsilon$ [6, 22]\\
-    $X_t$ = numero de personas con edad $\epsilon$ [23, 62]\\
-    $X_j$ = numero de personas con edad $\epsilon$ [63, 79]\\
+    $X_i = \log_{10}(IPCH)$, donde IPCH corresponde al ingreso per cápita por hogar.\\
+    $X_p$ = número de personas con edad $\epsilon$ [0, 5].\\
+    $X_e$ = número de personas con edad $\epsilon$ [6, 22].\\
+    $X_t$ = número de personas con edad $\epsilon$ [23, 62].\\
+    $X_j$ = número de personas con edad $\epsilon$ [63, 79].
 \end{center}
 
-De esta forma, el model ode regrecion lineal queda de la siguiente forma:
+De esta forma, el modelo de regresión lineal queda de la siguiente manera:
 
 \begin{equation}
     Y_i = -2.1723 + 0.3792X_i + 0.6221X_p + 1.0065X_e + 0.4302X_t + 0.1614X_j
-    \label{eq:regrecion}
+    \label{eq:regresion}
 \end{equation}
 
-Es importante mencionar que los coeficientes $\vec{\beta}$ y $\alpha$ fueron entregados por el enunciado, donde el modelo fue calibrado segun los datos del 2012. Además, se asume que este modelo cumple los 3 supuestos correspondiente; independencia, linealidad y homocedasticidad
+Es importante mencionar que los coeficientes $\vec{\beta}$ y $\alpha$ fueron proporcionados por el enunciado, donde el modelo fue calibrado según los datos del 2012. Además, se asume que este modelo cumple los tres supuestos correspondientes: independencia, linealidad y homocedasticidad.
 
-\section{Obtencion Resultados Bases de Datos}
+\section{Obtención de Resultados a partir de Bases de Datos}
 
-Para el analisis y  discucion de la regracion lineal, se utilizara la base de datos ESI \textbf{\cite{esi}}, la cual contiene toda la informacion nesesaria para aplicar en el modelo.
+Para el análisis y discusión de la regresión lineal, se utilizará la base de datos ESI \textbf{\cite{esi}}, la cual contiene toda la información necesaria para aplicar en el modelo.
 \\ \\
-De esta forma, en primer lugar se realizo un filtrado de la comuna Las COndes, ademas de calcular los distintos factores y promediarlos para los años 2012, 2017 y 2023.
+Inicialmente, se realizó un filtrado de datos correspondientes a la comuna de Las Condes, además de calcular los distintos factores y promediarlos para los años 2012, 2017 y 2023.
 
 \begin{table}[H]
     \centering
@@ -230,22 +231,22 @@ De esta forma, en primer lugar se realizo un filtrado de la comuna Las COndes, a
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
         \hline
-        Año & Numero Hogares & $X_i$ & $X_p$ & $X_e$ & $X_t$ & $X_j$ & Tamaño hogar \\
+        Año & Número Hogares & $X_i$ & $X_p$ & $X_e$ & $X_t$ & $X_j$ & Tamaño hogar \\
         \hline
-        2012 & 271 &5.730 & 0.258 & 0.771 & 1.978 & 0.303 & 3.16\\
-        2017 & 272 &5.773 & 0.243 & 0.691 & 1.978 & 0.320 & 3.09\\
-        2023 & 187 &5.934 & 0.160 & 0.668 & 1.775 & 0.299 & 2.60\\
+        2012 & 271 & 5.730 & 0.258 & 0.771 & 1.978 & 0.303 & 3.16\\
+        2017 & 272 & 5.773 & 0.243 & 0.691 & 1.978 & 0.320 & 3.09\\
+        2023 & 187 & 5.934 & 0.160 & 0.668 & 1.775 & 0.299 & 2.60\\
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: Elaboracion propia a partir de los datos de encueta ESI \textbf{\cite{esi}}
+    \\Fuente: Elaboración propia a partir de los datos de encuesta ESI \textbf{\cite{esi}}
 \end{table}
 
-Posteriormente, se consulto la encuesta de Estimacion y Proyeccion, de esta forma se tendran los datos reales sobre la poblacion, para poder comparar con la muestra de la encuesta ESI.
+Posteriormente, se consultó la encuesta de Estimación y Proyección, de esta forma se tendrán los datos reales sobre la población, para poder comparar con la muestra de la encuesta ESI.
 
 \begin{table}[H]
     \centering
-    \caption{Valores Poblacion}
+    \caption{Valores Población}
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
@@ -257,14 +258,14 @@ Posteriormente, se consulto la encuesta de Estimacion y Proyeccion, de esta form
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: Elaboracion propia a partir de los datos de Estimación y Proyección 2002 - 2035
+    \\Fuente: Elaboración propia a partir de los datos de Estimación y Proyección 2002 - 2035
 \end{table}
 
-Conociendo el total de hogares de la poblacion, es posible calcular el numero de viajes totales obtenidos a partir de la regracion lineal:
+Conociendo el total de hogares de la población, es posible calcular el número de viajes totales obtenidos a partir de la regresión lineal:
 
 \begin{table}[H]
     \centering
-    \caption{Estimacion de viajes totales}
+    \caption{Estimación de viajes totales}
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|}
         \hline
@@ -276,16 +277,16 @@ Conociendo el total de hogares de la poblacion, es posible calcular el numero de
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\ Fuente: Elaboracion propia a partir de los resultados de la ecuacion \ref{eq:regrecion}
+    \\ Fuente: Elaboración propia a partir de los resultados de la ecuación \ref{eq:regrecion}
 \end{table}
 
-*Los viajes totales se truncaron hacia abajo, ya que el numero de viajes no puede ser decimal, de esta forma, no es posible generar un viaje extra.
+*Los viajes totales se truncaron hacia abajo, ya que el número de viajes no puede ser decimal. De esta forma, no es posible generar un viaje extra.
 
 \section{Discusiones}
 
-\subsection{Inflacion}
+\subsection{Inflación}
 
-Un punto clave a considerar sobre el comportamiento de las personas es el valor y peso que tiene la moneda en el tiempo, de esta manera, es nesesario considerar la inflacion, y el aumento del precio en los distintos insumos del transporte.
+Un punto clave a considerar sobre el comportamiento de las personas es el valor y peso que tiene la moneda en el tiempo. Por lo tanto, es necesario considerar la inflación y el aumento del precio en los distintos insumos del transporte.
 
 \begin{table}[H]
     \centering
@@ -293,73 +294,56 @@ Un punto clave a considerar sobre el comportamiento de las personas es el valor 
     \vspace{0.2cm}
     \begin{tabular}{|c|c|}
         \hline
-        Año & Inflacion \\
+        Periodo & Inflación (\%) \\
         \hline
-        2012 - 2017 & 18,2\% \\
-        2012 - 2023 & 61,5\% \\
+        2012 - 2017 & 18,2 \\
+        2012 - 2023 & 61,5 \\
         \hline
     \end{tabular}
     \vspace{0.2cm}
     \\Fuente: \textbf{\cite{ipc}}
 \end{table}
 
-La regrecion lineal aplicada fue calibrada segun los datos del 2012, por lo tanto, se puede ajustar $X_i$ segun la inflacion para obtener un parametro de viajes mas acertado:
-
-%Donde, algunos de los insumos relacionados con el transporte que han aumentado de precio son la bencina y el pesaje de transporte publico (usaremos el metro) estos se encuentran en la tabla \textbf{\ref{Insumos}}. Las variaciones porcentuales fueron calculadas sobre el año 2012
-
-%Considerando los resultados obtenidos, se puede ajustar el parametro Xi para ajustar la regrecion a los distintos años:
+La regresión lineal aplicada fue calibrada según los datos de 2012, por lo tanto, se puede ajustar $X_i$ según la inflación para obtener un parámetro de viajes más acertado.
 
 \begin{table}[H]
     \centering
-    \caption{Ajuste de modelo por inflacion}
+    \caption{Ajuste de modelo por inflación}
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|c|}
         \hline
-        Año & $X_i$ & $Y_i$ & Viajes Totales \\
+        Año & $X_i$ ajustado & $Y_i$ & Viajes Totales \\
         \hline
-        2012 & 5.730 & 1.84 & 166159\\
-        2017 & 5.700 & 1.74 & 173272\\
-        2023 & 5.725 & 1.58 & 207333\\
+        2012 & 5.730 & 1.84 & 166159 \\
+        2017 & 5.700 & 1.74 & 173272 \\
+        2023 & 5.725 & 1.58 & 207333 \\
         \hline
     \end{tabular}
     \vspace{0.2cm}
-    \\Fuente: Elaboracion propia
+    \\Fuente: Elaboración propia
 \end{table}
 
-*Los viajes totales se truncaron hacia abajo, ya que el numero de viajes no puede ser decimal, de esta forma, no es posible generar un viaje extra.
+*Los viajes totales se truncaron hacia abajo, ya que el número de viajes no puede ser decimal, evitando así la generación de viajes extra.
 
 \subsection{Precisión de Resultados}
 
-Analizando los datos presentados junto con las bases de datos, se estima que la precisión de los resultados obtenidos es fiable, ya que 
-las fuentes de donde se recopiló la información fueron directamente de las páginas web 
-gubernamentales y municipales, así como también de los agentes encargados de análisis estadísticos sociales, como el INE.
+Analizando los datos presentados junto con las bases de datos, se estima que la precisión de los resultados obtenidos es fiable, ya que las fuentes de donde se recopiló la información provienen directamente de páginas web gubernamentales, municipales y de agentes encargados de análisis estadísticos sociales, como el INE.
 
-Si bien se evidencia una diferencia de los parámetros $X_p$, $X_e$, $X_t$ y $X_j$, se debe a la comparación de datos muestrales
-con poblacionales, los cuales se compararon estadísticamente (ver Tabla \textbf{\ref{Precision_Resultados}}).
+Si bien se evidencia una variabilidad en los parámetros $X_p$, $X_e$, $X_t$ y $X_j$, esto se debe a la comparación de datos muestrales con datos poblacionales. Estos datos fueron comparados estadísticamente, como se muestra en la Tabla \textbf{\ref{Precision_Resultados}} (tabla no incluida).
 
-Se puede apreciar que los resultados obtenidos poseen una desviación estándar insignificante, por lo que se 
-consideran representativos para cada coeficiente. Además, se realizó un análisis del estadístico t para 
-comparar la media muestral con la media poblacional. Debido a que \(\left| p_{value} \right| < \left| t_{value} \right|\), existe una correlación entre las medias, 
-por lo que se puede afirmar que los resultados obtenidos son precisos y descriptivos.
+Se puede apreciar que los resultados poseen una desviación estándar insignificante, lo que indica que son representativos para cada coeficiente. Además, se realizó un análisis con el estadístico t para comparar la media muestral con la media poblacional. Debido a que \(|p_{value}| < |t_{value}|\), existe una correlación significativa entre las medias, lo que permite afirmar que los resultados son precisos y descriptivos.
 
-\subsection{Analisis}
+\subsection{Análisis}
 
-Considerando todo lo expuesto anteriormente, se puede observar que el modelo de regrecion lineal sin ser ajustado es fiable con cierto margen de error, donde se concluye que el numero de viajes disminuye por cada casa lo cual tiene sentido, ya que luego de analizar la inflacion y el valor de los distintos insumos de transporte (ver Tabla \textbf{\ref{Insumos}}), se puede concluir que el valor de un viaje no aumenta con mayor proporcion que la inflacion, por lo tanto el valor de este aumenta. Ademas, se puede observar que el tamaño de las familias disminuye, lo cual influye en el numero de viajes. Finalmente, es nesesario considerar el efecto que tuvo la pandemia sobre las personas, donde muchos trabajos comenzaron a ser virtuales o semi presenciales, lo cual afecta el transporte en familias, sobre todo las de menor tamaño.
+Considerando todo lo expuesto anteriormente, se puede observar que el modelo de regresión lineal, sin ser ajustado, es fiable con cierto margen de error. Se concluye que el número de viajes disminuye por cada casa, lo cual tiene sentido al analizar la inflación y el valor de los distintos insumos de transporte (ver Tabla \textbf{\ref{Insumos}}). Además, se puede observar que el tamaño de las familias disminuye, lo cual influye en el número de viajes. Finalmente, es necesario considerar el efecto que tuvo la pandemia sobre las personas, donde muchos trabajos comenzaron a ser virtuales o semi presenciales, lo cual afecta el transporte en familias, sobre todo las de menor tamaño.
 \\ \\
-Se observa que al calibrar el modelo segun la inflacion, los viajes por hogar bajan aun mas, lo cual se relaciona con la perdida de valor que tiene el dinero y no a sido proporcional a los aumentos de sueldos (ver Tabla \ref{VariacionIPCH}).
+Se observa que al calibrar el modelo según la inflación, los viajes por hogar bajan aún más, lo cual se relaciona con la pérdida de valor que tiene el dinero y no ha sido proporcional a los aumentos de sueldos (ver Tabla \ref{VariacionIPCH}).
 \\ \\
-Finalmente, haciendo un analisis estadistico de los datos, se concluye que los datos se pueden considerar representativos y precisos, dada la procedencia de estos y su correlacion muestral con poblacional según el estadístico T Student.
+Finalmente, haciendo un análisis estadístico de los datos, se concluye que los datos se pueden considerar representativos y precisos, dada la procedencia de estos y su correlación muestral con poblacional según el estadístico T Student.
 
 \section{Conclusión}
 
-En base a los resultados obtenidos, se puede concluir que el modelo 
-de regresión lineal es fiable para estimar el numero de viajes de la 
-comuna de Las Condes, sin embargo, es nesesario ajustar el modelo según 
-la inflación para obtener resultados mas precisos. Además, se concluye 
-que el número de viajes disminuye año a año, junto con el tamaño familiar. 
-Con esto, se puede decir que fue un trabajo exitoso, ya que se midió y 
-analizó la información de manera correcta, atribuyendo respaldo a la precisión 
-de los resultados y validéz a la regresión lineal.
+En base a los resultados obtenidos, se puede concluir que el modelo de regresión lineal es fiable para estimar el número de viajes de la comuna de Las Condes. Sin embargo, es necesario ajustar el modelo según la inflación para obtener resultados más precisos. Además, se concluye que el número de viajes disminuye año a año, junto con el tamaño familiar. Con esto, se puede afirmar que fue un trabajo exitoso, ya que se midió y analizó la información de manera correcta, atribuyendo respaldo a la precisión de los resultados y validez a la regresión lineal.
 
 \section{Anexos}
 
@@ -367,15 +351,15 @@ de los resultados y validéz a la regresión lineal.
 
 \begin{table}[H]
     \centering
-    \caption{Aumento de indicadores economicos}
+    \caption{Aumento de indicadores económicos}
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        Año & UF (Pesos) & $\Delta$ \% UF & Valor Dolar & $\Delta$ \% Dolar\\
+        Año & UF (Pesos) & $\Delta$ \% UF & Valor Dólar & $\Delta$ \% Dólar \\
         \hline
-        2012 & 22.296,19 & - & 501.34 & - \\
-        2017 & 26.348,83 & 18.2\% & 661.19 & 31.88 \\
-        2023 & 35.122,26 & 57.6\% & 826.34 & 64.82 \\
+        2012 & 22,296.19 & - & 501.34 & - \\
+        2017 & 26,348.83 & 18.2\% & 661.19 & 31.88\% \\
+        2023 & 35,122.26 & 57.6\% & 826.34 & 64.82\% \\
         \hline
     \end{tabular}
     \vspace{0.2cm}
@@ -388,11 +372,11 @@ de los resultados y validéz a la regresión lineal.
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        Año &  Bencina 95 (USD) & $\Delta$ \% Bencina & Metro (CLP) & $\Delta$ \% Metro\\
+        Año & Bencina 95 (USD) & $\Delta$ \% Bencina & Metro (CLP) & $\Delta$ \% Metro \\
         \hline
-        2012 &  1.56  & - & 610 & - \\
-        2017 &  1.15 & -26.28 & 660 & 8.19\\
-        2023 &  1.64 & 5.13 & 730 & 19.67\\
+        2012 & 1.56 & - & 610 & - \\
+        2017 & 1.15 & -26.28\% & 660 & 8.19\% \\
+        2023 & 1.64 & 5.13\% & 730 & 19.67\% \\
         \hline
     \end{tabular}
     \label{Insumos}
@@ -402,23 +386,23 @@ de los resultados y validéz a la regresión lineal.
 
 \begin{table}[H]
     \centering
-    \caption{Variacion IPCH ajustado por inflacion}
+    \caption{Variación IPCH ajustado por inflación}
     \vspace{0.2cm}
     \begin{tabular}{|c|c|c|}
         \hline
         Año & $X_i$ & $\Delta$ \% \\
         \hline
         2012 & 5.730 & - \\
-        2017 & 5.700 & -0.52 \\
-        2023 & 5.725 & -0.09 \\
+        2017 & 5.700 & -0.52\% \\
+        2023 & 5.725 & -0.09\% \\
         \hline
     \end{tabular}
     \vspace{0.2cm}
     \label{VariacionIPCH}
-    \\Fuente: Elaboracion propia
+    \\Fuente: Elaboración propia
 \end{table}
 
-\subsection{Presicion de Datos} \label{sec:Precision}
+\subsection{Precisión de Datos} \label{sec:Precision}
 
 \begin{table}[H]
     \caption{Análisis estadístico para la precisión de resultados.}
@@ -462,9 +446,9 @@ de los resultados y validéz a la regresión lineal.
         \hline
         \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
         0-5 & 10484 & 9377 & 19861 & 52.79\% & 47.21\% \\ \hline
-        6-22 & 33329 & 30366 & 63695 & 52.32\% & 47.67\% \\ \hline
-        23-62 & 75938 & 82177 & 158115 & 48.02\% & 51.97\% \\ \hline
-        63-80 & 17595 & 26095 & 43690 & 40.27\% & 59.72\% \\ \hline
+        6-22 & 33329 & 30366 & 63695 & 52.32\% & 47.68\% \\ \hline
+        23-62 & 75938 & 82177 & 158115 & 48.02\% & 51.98\% \\ \hline
+        63-80 & 17595 & 26095 & 43690 & 40.27\% & 59.73\% \\ \hline
     \end{tabular}
     \label{Cuadro 4}
     \vspace{0.2cm}
@@ -480,7 +464,7 @@ de los resultados y validéz a la regresión lineal.
         \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
         0-5 & 10672 & 9692 & 20364 & 52.41\% & 47.59\% \\ \hline
         6-22 & 31833 & 29028 & 60861 & 52.31\% & 47.69\% \\ \hline
-        23-62 & 84879 & 88035 & 172914 & 49.08\% & 50.91\% \\ \hline
+        23-62 & 84879 & 88035 & 172914 & 49.08\% & 50.92\% \\ \hline
         63-80 & 21753 & 31816 & 53569 & 40.61\% & 59.39\% \\ \hline
     \end{tabular}
     \label{Cuadro 5}
@@ -495,10 +479,10 @@ de los resultados y validéz a la regresión lineal.
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
         \textbf{Rango etario} & \textbf{Hombres} & \textbf{Mujeres} & \textbf{Total} & \textbf{\% Hombres} & \textbf{\% Mujeres} \\ \hline
-        0-5 & 10769 & 9758 & 20527 & 52.46\% & 47.53\% \\ \hline
-        6-22 & 31416 & 28678 & 60094 & 52.27\% & 47.72\% \\ \hline
-        23-62 & 96289 & 97341 & 193630 & 49.72\% & 50.27\% \\ \hline
-        63-80 & 27825 & 39107 & 66932 & 41.57\% & 58.42\% \\ \hline
+        0-5 & 10769 & 9758 & 20527 & 52.46\% & 47.54\% \\ \hline
+        6-22 & 31416 & 28678 & 60094 & 52.27\% & 47.73\% \\ \hline
+        23-62 & 96289 & 97341 & 193630 & 49.72\% & 50.28\% \\ \hline
+        63-80 & 27825 & 39107 & 66932 & 41.57\% & 58.43\% \\ \hline
     \end{tabular}
     \label{Cuadro 6}
     \vspace{0.2cm}
